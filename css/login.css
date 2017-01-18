@@ -1,0 +1,10 @@
+.login-form  {
+        position: fixed;
+        top: 50%;
+        margin-top: -19.375rem;
+        left: 50%;
+        margin-left: -16.5rem;
+        opacity: 0;
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+    }
