@@ -1,5 +1,21 @@
 <?php //BACK END
-  //login to, simple centered dialog username password.
+	session_start();
+	//login to, simple centered dialog username password.
+	require_once 'db.php';
+	//if may database na
+	if(isset($_POST['Login'])){
+	// 	$uName = $_POST['Uname'];
+	// 	$uPass = $_POST['Upass'];
+	// 	$accountDatas = $db -> select("",["","","","",""],["AND"=>[""=> , ""=> ]]);
+	// 	if(count($accountData > 0)){
+	// 		foreach($accountDatas as $accountData){
+	// 			$_SESSION['account'] = $accountData;
+				header("Location:admin.php");
+	// 		}
+	// 	}
+	}
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,35 +24,21 @@
 	<meta name="viewportz" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-	<style>
-
-		.login-form  {
-            position: fixed;
-            top: 50%;
-            margin-top: -19.375rem;
-            left: 50%;
-            margin-left: -16.5rem;
-            opacity: 0;
-            -webkit-transform: scale(.8);
-            transform: scale(.8);
-        }
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row" >
 			<div class="col-md-3 login-form">
 				<h2>Admin Login</h2>
-				<form action="login.php"  style="padding:20px;border:1px solid black; box-shadow:5px 5px rgba(0,0,0,0.5);">
+				<form action="login.php" method="POST" style="padding:20px;border:1px solid black; box-shadow:5px 5px rgba(0,0,0,0.5);">
 					<label>Username</label>
 					<input type="text" class="form-control" name="Uname" placeholder="Username"/>
 					<br/>
 					<label>Password</label>
-					<input type="password" class="form-control" name="UPass" placeholder="Password"/>
+					<input type="password" class="form-control" name="Upass" placeholder="Password"/>
 					<br/>
-					<button class="btn btn-primary pull-right">Log In</button>
+					<button class="btn btn-primary pull-right" name="Login">Log In</button>
 					<br/>
 				</form>
 			</div>
