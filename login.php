@@ -29,7 +29,7 @@
 		<div class="row" >
 			<div class="col-md-3 login-form">
 				<h2>Admin Login</h2>
-				<form action=""  style="padding:20px;border:1px solid black; box-shadow:5px 5px rgba(0,0,0,0.5);">
+				<form action="login.php"  style="padding:20px;border:1px solid black; box-shadow:5px 5px rgba(0,0,0,0.5);">
 					<label>Username</label>
 					<input type="text" class="form-control" name="Uname" placeholder="Username"/>
 					<br/>
