@@ -14,9 +14,9 @@
     </ul>
     <form class="navbar-form navbar-right">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
+        <input type="text" class="form-control" placeholder="Put Application Number...">
       </div>
-      <button type="submit" class="btn btn-default">Submit</button>
+      <button type="submit" class="btn btn-default">Search Application Form</button>
     </form>
   </div>
 </nav>
