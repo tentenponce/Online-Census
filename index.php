@@ -17,33 +17,61 @@
   <body>
     <?php include_once('nav.php');?>
       <div id="section1" class="container-fluid">
-        <h1>Greetings mga Hampaslupa</h1>
-        <p>Carousel + important images here</p>
+        <br/>
+        <br/>
+        <br/>
+          <h1 class="header">E-Census</h1>
+          <p class="meaning">Carousel + important images here</p>
       </div>
       <div id="section2" class="container-fluid">
-        <h1>Importance</h1>
-        <p>Importance of e-Census</p>
+        <div class="message2">
+          <h1>Importance</h1>
+          <span>Importance of e-Census</span>
+        </div>
       </div>
       <div id="section3" class="container-fluid">
-        <h1>more about census</h1>
-        <p>more</p>
+        <div class="message3">
+          <h1>more about census</h1>
+          <p>more</p>
+        </div>
       </div>
       <div id="section41" class="container-fluid">
-        <h1>ApplicationForm</h1>
-        <p>Application form</p>
-        <a href="census.php"><button class = "btn primary">Application Form</button></a>
+        <div class="message4">
+          <h1>ApplicationForm</h1>
+          <p>Application form</p>
+          <a href="census.php"><button class = "btn primary">Application Form</button></a>
+        </div>
       </div>
       <div id="section42" class="container-fluid">
-        <h1>Footah</h1>
-        <p>About</p>
+        <div class="message4">
+          <h1>Footah</h1>
+          <p>About</p>
+        <div>
       </div>
     </body>
   <script type="text/javascript" src="bootstrap/js/bootstrap-notify.min.js"></script>
   <script>
+  $(window).on('scroll', function() {
+    var y_scroll_pos = window.pageYOffset; // set to whatever you want it to be
+
+
+      if(y_scroll_pos > 600) {
+
+          $(".message2").animate({left: '250px'});
+          $(".message2").fadeIn();
+      }
+      if(y_scroll_pos > 1200) {
+          $(".message3").animate({marginLeft : "100px"},"slow","swing");
+      }
+      if(y_scroll_pos > 1800) {
+          $(".message4").fadeIn("slow");
+      }
+
+  });
   $(document).ready(function(){
+    $(".header").animate({marginLeft : "25px"},"slow","swing");
     // Add scrollspy to <body>
     $('body').scrollspy({target: ".navbar", offset: 50});
-
     // Add smooth scrolling on all links inside the navbar
     $("#myNavbar a").on('click', function(event) {
       // Make sure this.hash has a value before overriding default behavior
