@@ -44,3 +44,22 @@ body::-webkit-scrollbar-thumb
 #section3 {padding-top:50px;height:700px;color: #fff; background-color: #ff9800;}
 #section41 {padding-top:50px;height:700px;color: #fff; background-color: #00bcd4;}
 #section42 {padding-top:50px;height:700px;color: #fff; background-color: #009688;}
+.header{
+	font-size:72px;
+	font-family: "Century Gothic";
+	padding:25px;
+	margin-left: -500px;
+}
+.meaning{
+
+	margin-top: 1000px;
+}
+.message2{
+	display: none;
+}
+.message3{
+	margin-left: -500px;
+}
+.message4{
+	display: none;
+}
