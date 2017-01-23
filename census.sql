@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2017 at 04:01 PM
+-- Generation Time: Jan 23, 2017 at 10:33 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -43,6 +43,24 @@ INSERT INTO `admin` (`id`, `username`, `password`, `tag`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `certification`
+--
+
+CREATE TABLE `certification` (
+  `application_number` varchar(255) NOT NULL,
+  `enumerator` varchar(255) NOT NULL,
+  `enum_date_accomplished` date NOT NULL,
+  `team_supervisor` varchar(255) NOT NULL,
+  `team_date_reviewed` date NOT NULL,
+  `cas_acas` varchar(255) NOT NULL,
+  `cas_date_reviewed` date NOT NULL,
+  `co_ro_po_supervisor` varchar(255) NOT NULL,
+  `co_ro_po_date_reviewed` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `geographic_information`
 --
 
@@ -60,6 +78,39 @@ CREATE TABLE `geographic_information` (
   `address` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `summary_of_visit`
+--
+
+CREATE TABLE `summary_of_visit` (
+  `application_number` varchar(255) NOT NULL,
+  `enumerator_code` varchar(255) NOT NULL,
+  `number_of_visit` int(11) NOT NULL,
+  `result_of_final_visit` int(11) NOT NULL,
+  `number_of_household_members` int(11) NOT NULL,
+  `number_of_males` int(11) NOT NULL,
+  `number_of_females` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `visit`
+--
+
+CREATE TABLE `visit` (
+  `application_number` varchar(255) NOT NULL,
+  `visit_1` datetime NOT NULL,
+  `visit_result_1` int(1) NOT NULL,
+  `visit_2` datetime NOT NULL,
+  `visit_result_2` int(1) NOT NULL,
+  `visit_3` datetime NOT NULL,
+  `visit_result_3` int(1) NOT NULL,
+  `next_visit` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -69,6 +120,12 @@ CREATE TABLE `geographic_information` (
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `certification`
+--
+ALTER TABLE `certification`
+  ADD PRIMARY KEY (`application_number`);
 
 --
 -- Indexes for table `geographic_information`
