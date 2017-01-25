@@ -1,5 +1,5 @@
 body{
-	font: "Century Gothic";
+	font-family: "Century Gothic";
 	overflow-x: hidden;
 }
 body::-webkit-scrollbar-track
@@ -44,10 +44,10 @@ body::-webkit-scrollbar-thumb
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 }
-#section2 {padding-top:50px;height:700px;color: #fff; background-color: #673ab7;}
-#section3 {padding-top:50px;height:700px;color: #fff; background-color: #ff9800;}
+#section2 {padding-top:50px;height:700px;color: #000; background-color: #fff;}
 #section41 {padding-top:50px;height:700px;color: #fff; background-color: #00bcd4;}
-#section42 {padding-top:50px;height:700px;color: #fff; background-color: #009688;}
+#sectionFooter {padding-top:50px;height:400px;color: #fff; background-color: #34495e;}
+#footer {height:50px;color: #000; text-align: center;background-color: #ecf0f1;}
 .header{
 	opacity: 1;
 	font-size:72px;

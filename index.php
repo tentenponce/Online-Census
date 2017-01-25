@@ -28,27 +28,46 @@
       <div id="section2" class="container-fluid">
         <div class="message2">
           <h1 class="header wow bounceInUp"  data-wow-offset="10">Announcements</h1>
-          <span class="wow slideInRight">aa</span>
-        </div>
-      </div>
-      <div id="section3" class="container-fluid">
-        <div class="message3">
-          <h1>more about census</h1>
-          <p>more</p>
+          <span class="wow slideInRight"></span>
         </div>
       </div>
       <div id="section41" class="container-fluid">
-        <div class="message4">
-          <h1>ApplicationForm</h1>
-          <p>Application form</p>
-          <a href="census1.php"><button class = "btn primary">Application Form</button></a>
+          <div class="container">
+            <h1 class="header wow bounceInLeft">Application Form</h1>
+          </div>
+          <div class="container">
+            <p>slight screenshot of the application form photoshoped...</p>
+          </div>
+          <div class="container">
+            <div style="float:right;bottom:10;">
+              <a href="census1.php"><button class = "btn-lg btn btn-default wow tada">Application Form</button></a>
+            </div>
+          </div>
+      </div>
+      <div id="sectionFooter" class="container-fluid">
+        <div class="container" style="margin-top:0px;">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 style="text-align:center;">qweqwe</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">footer 1 (fb twitter ig other multimedia)</div>
+            <div class="col-md-6">
+              <textarea class='form-control' rows="9" placeholder="Message"></textarea>
+              <br/>
+              <button class="btn btn-success" style="float:right">Submit</button>
+            </div>
+            <div class="col-md-3">footer 3 notes</div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+            </div>
+          </div>
         </div>
       </div>
-      <div id="section42" class="container-fluid">
-        <div class="message4">
-          <h1>Footah</h1>
-          <p>About</p>
-        <div>
+      <div id="footer" class="container-fluid">
+        <h4>Copyright © 2016. Alrights Reserved.</h4>
       </div>
     </body>
   <script type="text/javascript" src="bootstrap/js/bootstrap-notify.min.js"></script>
