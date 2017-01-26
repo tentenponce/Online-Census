@@ -1,6 +1,7 @@
 body{
-	font-family: "Century Gothic";
+	font: "Century Gothic";
 	overflow-x: hidden;
+	background: white;
 }
 body::-webkit-scrollbar-track
 {
@@ -37,21 +38,22 @@ body::-webkit-scrollbar-thumb
 }
 #section1 {
 	padding-top:50px;
-	height:700px;
+	height:850px;
 	color: #fff;
 	background: url("../images/banner1.png");
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 }
-#section2 {padding-top:50px;height:700px;color: #000; background-color: #fff;}
-#section41 {padding-top:50px;height:700px;color: #fff; background-color: #00bcd4;}
-#sectionFooter {padding-top:50px;height:400px;color: #fff; background-color: #34495e;}
-#footer {height:50px;color: #000; text-align: center;background-color: #ecf0f1;}
+#section2 {padding-top:50px;height:800px;color: #000; background-color: #fff;}
+#section3 {padding-top:50px;height:750px;color: #fff; background-color: #ff9800;}
+#section41 {padding-top:50px;height:750px;color: #fff; background-color: #00bcd4;}
+#section42 {padding-top:50px;height:750px;color: #fff; background-color: #009688;}
 .header{
 	opacity: 1;
 	font-size:72px;
 	padding:25px;
+	font-weight: lighter;;
 }
 .header-message{
 	padding-left:70px;
@@ -72,4 +74,13 @@ ul > li > a:hover
 	background: transparent !important;
 	border-bottom:2px solid #dc2a6c !important;
 
+}
+.footer{
+	height:70px;
+	padding:20px;
+	font-size: 16px;
+	font-size-adjust: auto;
+	text-align: center;
+	background:  #2c3e50;
+	color:#fffff0;
 }

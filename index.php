@@ -6,7 +6,7 @@
 <html lang="en">
   <head>
     <title>Online-Census</title>
-    <link rel="icon" href="images/logo.png" type="image/png" sizes="16x22">
+    <link rel="icon" href="images/logo.png?<?php echo date('Y-m-d H:i:s'); ?>" type="image/png" sizes="16x22">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.min.css">
@@ -22,8 +22,15 @@
         <br/>
         <br/>
         <br/>
-          <h1 class="header wow bounceInUp">E-Census</h1>
-          <p class="header-message wow fadeInRight">Online Census meaning</p>
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="header wow bounceInUp">E-Census</h1>
+            <p class="header-message wow fadeInRight">Online Census meaning</p>
+          </div>
+          <div class="col-md-6">
+            <img src="images/logo.png" class="wow flipInY img-circle">
+          </div>
+        </div>
       </div>
       <div id="section2" class="container-fluid">
         <div class="message2">
@@ -47,27 +54,40 @@
       <div id="sectionFooter" class="container-fluid">
         <div class="container" style="margin-top:0px;">
           <div class="row">
+
             <div class="col-md-12">
-              <h1 style="text-align:center;">qweqwe</h1>
+              <h1 style="text-align:center;" class="wow pulse">Contact Us!</h1>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-3">footer 1 (fb twitter ig other multimedia)</div>
+          <div class="row wow flipInX">
+            <div class="col-md-3">
+              <h3>Follow us</h3>
+            </div>
             <div class="col-md-6">
-              <textarea class='form-control' rows="9" placeholder="Message"></textarea>
+              <h3> Found Bugs? </h3>
+              <small>Send us a report</small>
+              <br/>
+              <br/>
+              <textarea class='form-control' rows="9" placeholder="Message" style="resize:none;"></textarea>
               <br/>
               <button class="btn btn-success" style="float:right">Submit</button>
             </div>
-            <div class="col-md-3">footer 3 notes</div>
+            <div class="col-md-3">
+              <h3>Contact number</h3>
+              <h3>Email us at :</h3>
+            </div>
           </div>
           <div class="row">
             <div class="col-md-12">
             </div>
           </div>
         </div>
+        <br/>
+        <br/>
+
       </div>
-      <div id="footer" class="container-fluid">
-        <h4>Copyright © 2016. Alrights Reserved.</h4>
+      <div class="footer" class="container-fluid">
+        <span>Copyright © 2017. Alrights Reserved.</span>
       </div>
     </body>
   <script type="text/javascript" src="bootstrap/js/bootstrap-notify.min.js"></script>
