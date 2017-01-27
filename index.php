@@ -25,10 +25,14 @@
         <div class="row">
           <div class="col-md-6">
             <h1 class="header wow bounceInUp">E-Census</h1>
-            <p class="header-message wow fadeInRight">Online Census meaning</p>
+            <p class="header-message wow fadeInRight">
+
+              A census is the procedure of systematically acquiring and recording information about the members of a given population. It is a regularly occurring and official count of a particular population. The term is used mostly in connection with national population and housing censuses; other common censuses include agriculture, business, and traffic censuses. in Electronic Manner
+
+            </p>
           </div>
           <div class="col-md-6">
-            <img src="images/logo.png" class="wow flipInY img-circle">
+            <img src="images/logo.png" style="padding:150px;" class="center-block img-responsive wow flipInY img-circle">
           </div>
         </div>
       </div>
@@ -59,11 +63,14 @@
               <h1 style="text-align:center;" class="wow pulse">Contact Us!</h1>
             </div>
           </div>
-          <div class="row wow flipInX">
+          <div class="row">
             <div class="col-md-3">
-              <h3>Follow us</h3>
+              <h3>Follow us on</h3>
+              <a href="www.twitter.com/Online-Census"><img src="images/twitter.png"style="margin-left:50px;" height= "100" width="100" class="wow flipInY img-circle"></a><br/>
+              <a href="www.facebook.com/Online-Census"><img src="images/facebook.png" height= "100" width="100" class=" wow flipInX img-circle"></a>
+              <a href="www.facebook.com/Online-Census"><img src="images/instagram.png" style="border-radius:100%;" height= "100" width="100" class=" wow flipInX"></a>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 wow flipInX">
               <h3> Found Bugs? </h3>
               <small>Send us a report</small>
               <br/>

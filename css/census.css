@@ -1,5 +1,5 @@
 body{
-	font: "Century Gothic";
+	font-family: "Century Gothic";
 	overflow-x: hidden;
 	background: white;
 }
@@ -45,6 +45,11 @@ body::-webkit-scrollbar-thumb
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 }
+@media (min-width: 768px) {
+  #section1 {
+    min-height: 100%;
+  }
+}
 #section2 {padding-top:50px;height:800px;color: #000; background-color: #fff;}
 #section3 {padding-top:50px;height:750px;color: #fff; background-color: #ff9800;}
 #section41 {padding-top:50px;height:750px;color: #fff; background-color: #00bcd4;}
@@ -56,8 +61,10 @@ body::-webkit-scrollbar-thumb
 	font-weight: lighter;;
 }
 .header-message{
+	font-family: "Century Gothic";
 	padding-left:70px;
-	font-size:32px;
+	font-size:18px;
+	text-indent: 50px;
 }
 nav {
 	height:53px !important;
