@@ -296,29 +296,12 @@
 
       <hr />
 
-      <div class='row'>
-        <div class='col-md-6 text-center'>
-          <p class='text-center'><b>HOUSEHOLD DEFINITION</b></p>
+      <div>
+        <p class='text-center'><b>HOUSEHOLD DEFINITION</b></p>
 
-          <p>
-            A <b>household</b> is a social unit consisting of a person living alone or a group of persons who sleep in the same housing unit and have a common arrangement in the preparation and consumption of food.
-          </p>
-        </div>
-
-        <div class='col-md-6 border-left'>
-          <p class='text-center'><b>HOUSEHOLD MEMBERSHIP</b></p>
-
-          <p><small>LIST THE PERSONS OR HOUSEHOLD MEMBERS IN THIS ORDER:</small></p>
-
-          <ul>
-            <li>Head</li>
-            <li>Spouse of the head</li>
-            <li>Never-married children of head/spouse from oldest to the youngest</li>
-            <li>Ever-married children of head/spouse and their families from oldest to the youngest</li>
-            <li>Other relatives</li>
-            <li>Nonrelatives</li>
-          </ul>
-        </div>
+        <p class='text-center'>
+          A <b>household</b> is a social unit consisting of a person living alone or a group of persons who sleep in the same housing unit and have a common arrangement in the preparation and consumption of food.
+        </p>
       </div>
 
     </form>
@@ -327,5 +310,4 @@
   <script type="text/javascript" src="js/jquery.form.js"></script>
   <script type="text/javascript" src="bootstrap/js/bootstrap-notify.min.js"></script>
   <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/census.js"></script>
 </html>
