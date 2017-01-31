@@ -6,8 +6,14 @@
 <nav class="navbar navbar-default navbar-fixed-top " >
   <div class="container-fluid">
     <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
       <p class="navbar-text" style="font-weight:bold;">Online Census</p>
     </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav" id="myNavbar">
       <li class="<?php if($thisPage=='Home'){echo 'active'; }?>"><a href="<?php if($thisPage=='Home'){echo '#section1';} elseif($thisPage=='ApplicationForm'){echo 'index.php';}?>">Home</a></li>
       <li <?php if($thisPage=='ApplicationForm'){echo 'style="display:none;"';}?>><a href="#section2">Contacts</a></li>
@@ -28,5 +34,6 @@
          </div>
        </div>
     </form>
+    </div>
   </div>
 </nav>

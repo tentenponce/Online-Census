@@ -31,7 +31,7 @@
 
             </p>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 col-xs-12 col-md-12">
             <img src="images/logo.png" style="padding:150px;" class="center-block img-responsive wow flipInY img-circle">
           </div>
         </div>
@@ -64,13 +64,25 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-3">
-              <h3>Follow us on</h3>
-              <a href="www.twitter.com/Online-Census"><img src="images/twitter.png"style="margin-left:50px;" height= "100" width="100" class="wow flipInY img-circle"></a><br/>
-              <a href="www.facebook.com/Online-Census"><img src="images/facebook.png" height= "100" width="100" class=" wow flipInX img-circle"></a>
-              <a href="www.facebook.com/Online-Census"><img src="images/instagram.png" style="border-radius:100%;" height= "100" width="100" class=" wow flipInX"></a>
+            <div class="col-md-3 col-sm-12 col-xs-12 ">
+              <h3 class="col-sm-12 col-xs-12 center-block">Follow us on</h3>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-12 col-sm-12 col-xs-12 ">
+                    <a href="www.twitter.com/Online-Census"><img src="images/twitter.png"  height= "100" width="100" class="center-block wow flipInY img-circle"></a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                    <a href="www.facebook.com/Online-Census"><img src="images/instagram.png" style="border-radius:100%;" height= "100" width="100" class="center-block wow flipInX"></a>
+                  </div>
+                  <div class="col-md-6 col-sm-12 col-xs-12">
+                    <a href="www.facebook.com/Online-Census"><img src="images/facebook.png" height= "100" width="100" class="center-block wow flipInX img-circle"></a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-6 wow flipInX">
+            <div class="col-md-6 col-xs-12 col-sm-12 wow flipInX">
               <h3> Found Bugs? </h3>
               <small>Send us a report</small>
               <br/>
