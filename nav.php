@@ -16,10 +16,8 @@
     <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav" id="myNavbar">
       <li class="<?php if($thisPage=='Home'){echo 'active'; }?>"><a href="<?php if($thisPage=='Home'){echo '#section1';} elseif($thisPage=='ApplicationForm'){echo 'index.php';}?>">Home</a></li>
-      <li <?php if($thisPage=='ApplicationForm'){echo 'style="display:none;"';}?>><a href="#section2">Contacts</a></li>
-      <li <?php if($thisPage=='ApplicationForm'){echo 'style="display:none;"';}?>><a href="#section3">Other Information</a></li>
+      <li <?php if($thisPage=='ApplicationForm'){echo 'style="display:none;"';}?>><a href="#section2">Announcements</a></li>
       <li <?php if($thisPage=='ApplicationForm'){echo 'style="display:none;"';}?>><a href="#section41">E-Census</a></li>
-      <li <?php if($thisPage=='ApplicationForm'){echo 'style="display:none;"';}?>><a href="#section42">Footer</a></li>
       <li class="<?php if($thisPage=='ApplicationForm'){echo 'active'; }?>" <?php if($thisPage=='Home'){echo 'style="display:none;"';}?>><a href="census.php">Application Form</a></li>
 
       <li><a href="#"></a></li>

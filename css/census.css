@@ -52,8 +52,12 @@ body::-webkit-scrollbar-thumb
 }
 #section2 {padding-top:50px;height:800px;color: #000; background-color: #fff;}
 #section3 {padding-top:50px;height:750px;color: #fff; background-color: #ff9800;}
-#section41 {padding-top:50px;height:750px;color: #fff; background-color: #00bcd4;}
-#section42 {padding-top:50px;height:750px;color: #fff; background-color: #009688;}
+#section41 {padding-top:50px;height:750px;color: #fff; background:url("../images/applicationform.png");
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+#section42 {padding-top:50px;height:500px;color: #000; background-color: #FFF;}
 .header{
 	opacity: 1;
 	font-size:72px;

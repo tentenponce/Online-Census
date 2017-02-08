@@ -55,7 +55,7 @@
             </div>
           </div>
       </div>
-      <div id="sectionFooter" class="container-fluid">
+      <div id="section42" class="container-fluid">
         <div class="container" style="margin-top:0px;">
           <div class="row">
 
