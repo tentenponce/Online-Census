@@ -30,3 +30,33 @@ function updateHousehold() {
 
   $("#household_member_span").html(household);
 }
+
+function removeMember(member_name) {
+  $.get("ajax/removeMember.php", {member_name : member_name}, function(data) {
+    var result = parseInt(data);
+
+    if (result == 1) {
+      location.reload();
+    } else {
+      console.log(data);
+    }
+  });
+}
+
+function nextPage() {
+  var memberCount = $("#household_div > div").length;
+
+  if (memberCount > 0) {
+    window.location.href = "census3.php";
+  }
+}
+
+function citizenshipChange() {
+  var citizenship_select = $("#citizenship_select").val();
+
+  if (parseInt(citizenship_select) == 1) {
+    $("#country_div").hide();
+  } else {
+    $("#country_div").show();
+  }
+}
