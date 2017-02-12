@@ -10,6 +10,23 @@
   $member->{'age'} = $_POST['age'];
   $member->{'is_registered'} = $_POST['is_registered'];
   $member->{'arrangement'} = $_POST['arrangement'];
+  $member->{'religious'} = $_POST['religious'];
+  $member->{'citizenship'} = $_POST['citizenship'];
+  $member->{'country'} = $_POST['country'];
+  $member->{'ethnicity'} = $_POST['ethnicity'];
+  $member->{'disability'} = $_POST['disability'];
+  $member->{'seeing'} = $_POST['seeing'];
+  $member->{'hearing'} = $_POST['hearing'];
+  $member->{'walking'} = $_POST['walking'];
+  $member->{'remembering'} = $_POST['remembering'];
+  $member->{'self_caring'} = $_POST['self_caring'];
+  $member->{'communicating'} = $_POST['communicating'];
+  $member->{'foreign_city'} = $_POST['foreign_city'];
+  $member->{'province'} = $_POST['province'];
+  $member->{'city_municipality'} = $_POST['city_municipality'];
+  $member->{'grade_year'} = $_POST['grade_year'];
+  $member->{'course'} = $_POST['course'];
+  $member->{'overseas'} = $_POST['overseas'];
 
   if (!isset($_SESSION['members'])) {
     $members = array();

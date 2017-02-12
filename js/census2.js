@@ -60,3 +60,37 @@ function citizenshipChange() {
     $("#country_div").show();
   }
 }
+
+function cityMunicipalityChange() {
+  var city_municipality_select = $("#city_municipality_select").val();
+
+  if (parseInt(city_municipality_select) == 1) {
+    $("#city_municipality_div").hide();
+  } else {
+    $("#city_municipality_div").show();
+  }
+}
+
+function gradeYearChange() {
+  var grade_year_select = $("#grade_year_select").val();
+
+  if (parseInt(grade_year_select) >= 410) {
+    $("#course_div").show();
+  } else {
+    $("#course_div").hide();
+  }
+}
+
+function ageKeyUp() {
+  var age_input = $("#age_input").val();
+
+  $("#5_year_div").hide();
+  $("#10_year_div").hide();
+  if (parseInt(age_input) >= 5) {
+    $("#5_year_div").show();
+  }
+
+  if (parseInt(age_input) >= 10) {
+    $("#10_year_div").show();
+  }
+}

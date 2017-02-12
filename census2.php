@@ -38,6 +38,8 @@
       <hr />
 
       <div class='row text-center'>
+        <!--Page 2-->
+        <!--member_name-->
         <div class='col-md-3'>
           <p class='title'>Who is the <span id='household_member_span'></span> of this household?</p>
 
@@ -46,6 +48,7 @@
             <input id='member_name_input' onkeyup='householdName()' class="form-control" name='member_name' required>
           </div>
         </div>
+        <!--member_relationship-->
         <div class='col-md-3'>
           <p class='title'>What is <span class='household_member_name_span'></span> relationship to the head of the household?</p>
 
@@ -77,6 +80,7 @@
             </select>
           </div>
         </div>
+        <!--gender-->
         <div class='col-md-3'>
           <p class='title'>Is <span class='household_member_name_span'></span> male or female?</p>
 
@@ -88,6 +92,7 @@
             </select>
           </div>
         </div>
+        <!--born_date-->
         <div class='col-md-3'>
           <p class='title'>In what date was <span class='household_member_name_span'></span> born?</p>
 
@@ -96,14 +101,16 @@
           </div>
         </div>
         <div class='col-md-12'><br /></div>
+        <!--age-->
         <div class='col-md-3'>
           <p class='title'>What is <span class='household_member_name_span'></span>'s age as of his/her last birthday?</p>
 
           <div class="form-group">
-            <input type="number" class="form-control" name='age' required>
+            <input onkeyup='ageKeyUp()' id='age_input' type="number" class="form-control" name='age' required>
             <label><small></small></label>
           </div>
         </div>
+        <!--is_registered-->
         <div class='col-md-3'>
           <p class='title'>Was <span class='household_member_name_span'></span>'s birth registered with the Civil Registry Office?</p>
 
@@ -115,6 +122,7 @@
             </select>
           </div>
         </div>
+        <!--arrangement-->
         <div class='col-md-3'>
           <p class='title'>Is <span class='household_member_name_span'></span> single, married, widowed, divorced/separated, or in a comon-law/live-in arrangement?</p>
 
@@ -129,16 +137,18 @@
             </select>
           </div>
         </div>
+        <!--religious-->
         <div class='col-md-3'>
           <p class='title'>What is <span class='household_member_name_span'></span> religious affliation?</p>
 
           <div class="form-group">
-            <select id='religious_select' class='form-control' name='religious' required>
-            </select>
+            <label><small>Religion</small></label>
+            <input type="text" class="form-control" name='religious' required>
           </div>
         </div>
         <!--Page 3-->
         <div class='col-md-12'><br /></div>
+        <!--citizenship-->
         <div class='col-md-4'>
           <p class='title'>Is <span class='household_member_name_span'></span> a citizen of the Philippines?</p>
 
@@ -155,18 +165,28 @@
 
             <div class="form-group">
               <label><small>Country</small></label>
-              <input id='country_input' class="form-control" name='country' required>
+              <input id='country_input' class="form-control" name='country'>
             </div>
           </div>
         </div>
+        <!--ethnicity-->
         <div class='col-md-4'>
           <p class='title'>What is <span class='household_member_name_span'></span>'s ethnicity by blood? Is he/she a/an </p>
 
           <div class="form-group">
             <select id='ethnicity_select' class='form-control' name='ethnicity' required>
+              <option value='1'>O+</option>
+              <option value='2'>A+</option>
+              <option value='3'>B+</option>
+              <option value='4'>AB+</option>
+              <option value='5'>O-</option>
+              <option value='6'>A-</option>
+              <option value='7'>B-</option>
+              <option value='8'>AB-</option>
             </select>
           </div>
         </div>
+        <!--disability-->
         <div class='col-md-4'>
           <p class='title'>Does <span class='household_member_name_span'></span> have any physical or mental disability?</p>
 
@@ -178,14 +198,21 @@
           </div>
         </div>
 
-        <div id='5_year_div' class='col-md-12 row'>
-          <h4 class='col-md-12'><b>For All 5 Years Old and Over</b></h4>
+        <div class='col-md-12'>
+          <br />
+        </div>
 
-          <div class='col-md-3'>
+        <div id='5_year_div' class='col-md-8 row' style='display: none;'>
+          <hr class='col-md-12' />
+          <h4 class='col-md-12'><b>For All 5 Years Old and Over</b></h4>
+          <hr class='col-md-12' />
+
+          <!--difficulty: seeing, hearing, walking, remembering, self_caring, communicating-->
+          <div class='col-md-4'>
             <p class='title'>Does <span class='household_member_name_span'></span> have any difficulty/problem in:</p>
 
             <div class="checkbox">
-              <label><input type="checkbox" name='seeing' value="1">Seeing, even when wearing eyeglasses</label>
+              <label><input name='seeing' type="checkbox" value="1">Seeing, even when wearing eyeglasses</label>
             </div>
             <div class="checkbox">
               <label><input name='hearing' type="checkbox" value="1">Hearing, even when using a hearing aid</label>
@@ -203,17 +230,82 @@
               <label><input name='communicating' type="checkbox" value="1">Communicating using his/her usual language</label>
             </div>
           </div>
-
-          <div class='col md-3'>
+          <!--city_municipality-->
+          <div class='col-md-4'>
             <p class='title'>In what City/Municipality did <span class='household_member_name_span'></span> reside on May 1, 2005?</p>
 
             <div class="form-group">
-              <select id='city_municipality_select' class='form-control' name='city_municipality' required>
+              <select onchange='cityMunicipalityChange()' id='city_municipality_select' class='form-control' name='foreign_city'>
                 <option value='1'>Same City/Municipality</option>
                 <option value='2'>Foreign Country</option>
               </select>
             </div>
+
+            <div id='city_municipality_div' style='display: none;'>
+              <div class="form-group">
+                <label><small>Province</small></label>
+                <input id='province_input' class="form-control" name='province'>
+              </div>
+
+              <div class="form-group">
+                <label><small>City/Municipality</small></label>
+                <input id='city_municipality_input' class="form-control" name='city_municipality'>
+              </div>
+            </div>
           </div>
+          <!--grade_year-->
+          <div class='col-md-4'>
+            <p class='title'>What is the heighest grade/year completed by <span class='household_member_name_span'></span>?</p>
+
+            <select onchange='gradeYearChange()' id='grade_year_select' class='form-control' name='grade_year' required>
+              <option value='0'>No grade completed</option>
+              <option value='10'>Preschool</option>
+              <option value='210'>Grade 1</option>
+              <option value='220'>Grade 2</option>
+              <option value='230'>Grade 3</option>
+              <option value='240'>Grade 4</option>
+              <option value='250'>Grade 5</option>
+              <option value='260'>Grade 6</option>
+              <option value='270'>Grade 7</option>
+              <option value='280'>Elementary Graduate</option>
+              <option value='310'>1st Year</option>
+              <option value='320'>2nd Year</option>
+              <option value='330'>3rd Year</option>
+              <option value='340'>4th Year</option>
+              <option value='350'>High School Graduate</option>
+              <option value='410'>1st Year Post Secondary</option>
+              <option value='420'>2nd Year Post Secondary</option>
+              <option value='430'>3rd Year Post Secondary</option>
+              <option value='810'>1st Year College</option>
+              <option value='820'>2nd Year College</option>
+              <option value='830'>3rd Year College</option>
+              <option value='840'>4th Year College</option>
+              <option value='850'>5th Year College</option>
+              <option value='860'>6th Year College</option>
+              <option value='900'>Post Baccalaureate</option>
+            </select>
+            <br />
+            <div id='course_div' class="form-group" style='display: none'>
+              <label><small>Course</small></label>
+              <input id='course_input' class="form-control" name='course'>
+            </div>
+          </div>
+        </div>
+        <div id='10_year_div' class='col-md-4 row' style='display: none;'>
+          <hr class='col-md-12' />
+          <h4 class='col-md-12'><b>For All 10 Years Old and Over</b></h4>
+          <hr class='col-md-12' />
+
+          <!--overseas-->
+          <div class='col-md-12'>
+            <p class='title'>Is <span class='household_member_name_span'></span> an overseas worker?</p>
+
+            <div class="form-group">
+              <select id='overseas_select' class='form-control' name='overseas' required>
+                <option value='1'>Yes</option>
+                <option value='2'>No</option>
+              </select>
+            </div>
         </div>
       </div>
 
@@ -306,15 +398,252 @@
                   break;
               }
 
+              //is registered
+              $is_registered = "No";
+              if ($member->{'is_registered'} == 1) {
+                $is_registered = "Yes";
+              }
+
+              $arrangement = $member->{'arrangement'};
+              switch ($arrangement) {
+                case 1:
+                  $arrangement = "Single";
+                  break;
+                case 2:
+                  $arrangement = "Married";
+                  break;
+                case 3:
+                  $arrangement = "Widowed";
+                  break;
+                case 4:
+                  $arrangement = "Divorced/Separated";
+                  break;
+                case 5:
+                  $arrangement = "Common-law/Live-in";
+                  break;
+                case 6:
+                  $arrangement = "Unknown";
+                  break;
+              }
+
+              $citizenship = $member->{'citizenship'};
+              switch ($citizenship) {
+                case 1:
+                  $citizenship = "Yes (Filipino Citizen)";
+                  break;
+                case 2:
+                  $citizenship = "Yes (Filipino with dual citizenship)";
+                  $country = $member->{'country'};
+                  break;
+                case 3:
+                  $citizenship = "No";
+                  $country = $member->{'country'};
+                  break;
+              }
+
+              $ethnicity = $member->{'ethnicity'};
+              switch ($ethnicity) {
+                case 1:
+                  $ethnicity = "O+";
+                  break;
+                case 2:
+                  $ethnicity = "A+";
+                  break;
+                case 3:
+                  $ethnicity = "B+";
+                  break;
+                case 4:
+                  $ethnicity = "AB+";
+                  break;
+                case 5:
+                  $ethnicity = "O+";
+                  break;
+                case 6:
+                  $ethnicity = "A+";
+                  break;
+                case 7:
+                  $ethnicity = "B-";
+                  break;
+                case 8:
+                  $ethnicity = "AB-";
+                  break;
+              }
+
+              $disability = $member->{'disability'};
+              switch ($disability) {
+                case 1:
+                  $disability = "With Disability";
+                  break;
+                case 2:
+                  $disability = "Without Disability";
+                  break;
+              }
+
+              $foreign_city = $member->{'foreign_city'};
+              if ($foreign_city == 2) {
+                $foreign_city = $member->{'city_municipality'} . ", " . $member->{'province'};
+              } else {
+                $foreign_city = "Same City/Municipality";
+              }
+
+              $grade_year = $member->{'grade_year'};
+              $course = "";
+              if ($grade_year >= 410) {
+                $course = $member->{'course'};
+              }
+
+              switch ($grade_year) {
+                case 0:
+                  $grade_year = "No grade completed";
+                  break;
+                case 10:
+                  $grade_year = "Preschool";
+                  break;
+                case 210:
+                  $grade_year = "Grade 1";
+                  break;
+                case 220:
+                  $grade_year = "Grade 2";
+                  break;
+                case 230:
+                  $grade_year = "Grade 3";
+                  break;
+                case 240:
+                  $grade_year = "Grade 4";
+                  break;
+                case 250:
+                  $grade_year = "Grade 5";
+                  break;
+                case 260:
+                  $grade_year = "Grade 6";
+                  break;
+                case 270:
+                  $grade_year = "Grade 7";
+                  break;
+                case 280:
+                  $grade_year = "Elementary Graduate";
+                  break;
+                case 310:
+                  $grade_year = "1st Year";
+                  break;
+                case 320:
+                  $grade_year = "2nd Year";
+                  break;
+                case 330:
+                  $grade_year = "3rd Year";
+                  break;
+                case 340:
+                  $grade_year = "4th Year";
+                  break;
+                case 350:
+                  $grade_year = "High School Graduate";
+                  break;
+                case 410:
+                  $grade_year = "1st Year Post Secondary";
+                  break;
+                case 420:
+                  $grade_year = "2nd Year Post Secondary";
+                  break;
+                case 430:
+                  $grade_year = "3rd Year Post Secondary";
+                  break;
+                case 810:
+                  $grade_year = "1st Year College";
+                  break;
+                case 820:
+                  $grade_year = "2nd Year College";
+                  break;
+                case 830:
+                  $grade_year = "3rd Year College";
+                  break;
+                case 840:
+                  $grade_year = "4th Year College";
+                  break;
+                case 850:
+                  $grade_year = "5th Year College";
+                  break;
+                case 860:
+                  $grade_year = "6th Year College";
+                  break;
+                case 900:
+                  $grade_year = "Post Baccalaureate";
+                  break;
+              }
+
+              if ($member->{'overseas'} == 1) {
+                $overseas = "Yes";
+              } else {
+                $overseas = "No";
+              }
+
               echo "
-              <div class='col-md-6'>
-                <p><b>" . $member->{'member_name'} . "</b>
-                <br />$member_relationship of the head of the household
-                <br />$gender
-                <br /><b>Birth Date: </b>" . date("M d, Y", strtotime($member->{'born_date'})) . "
-                <br /><b>Age: </b>" . $member->{'age'} . "
-                </p>
-                <button type='button' onclick=\"removeMember('" . $member->{'member_name'} . "')\" class='btn btn-block btn-danger'>Remove</button>
+              <div style='padding: 10px;' class='col-md-6'>
+                <div class='border-top border-left border-bottom border-right' style='padding: 10px;'>
+                  <h4><b>" . $member->{'member_name'} . "</b></h4>
+                  <p>$member_relationship of the head of the household</p>
+                  <hr />
+                  <p>$gender
+                  <br /><b>Birth Date: </b>" . date("M d, Y", strtotime($member->{'born_date'})) . "
+                  <br /><b>Age: </b>" . $member->{'age'} . "
+                  <br /><b>Registered with the Civil Registry Office: </b>$is_registered
+                  <br /><b>$arrangement</b>
+                  <br /><b>Religion: </b>" . $member->{'religious'} . "
+                  <br /><b>Citizenship: </b>$citizenship";
+
+                  if (isset($country)) {
+                    echo "<br /><b>Country: </b>$country";
+                  }
+
+                  echo "
+                  <br /><b>Blood Type: </b>$ethnicity
+                  <br />$disability
+                  </p>
+                  <p><b>(May 01, 2015) Resides On: </b>$foreign_city</p>
+                  <p><b>Highest Grade Completed: </b>$grade_year $course</p>
+                  <p><b>Overseas Worker: </b>$overseas</p>
+                  <hr />
+                  <p class='text-left'><b>Difficulty/Problem in:</b></p>
+                  <ul class='text-left'>";
+
+                    $hasDifficulty = false;
+                    if (isset($member->{'seeing'})) {
+                      echo "<li>Seeing, even when wearing eyeglasses</li>";
+                      $hasDifficulty = true;
+                    }
+
+                    if (isset($member->{'hearing'})) {
+                      echo "<li>Hearing, even when using a hearing aid</li>";
+                      $hasDifficulty = true;
+                    }
+
+                    if (isset($member->{'walking'})) {
+                      echo "<li>Walking or climbing steps</li>";
+                      $hasDifficulty = true;
+                    }
+
+                    if (isset($member->{'remembering'})) {
+                      echo "<li>Remembering or concentrating</li>";
+                      $hasDifficulty = true;
+                    }
+
+                    if (isset($member->{'self_caring'})) {
+                      echo "<li>Self-caring (bathing or dressing)</li>";
+                      $hasDifficulty = true;
+                    }
+
+                    if (isset($member->{'communicating'})) {
+                      echo "<li>Communicating using his/her usual language</li>";
+                      $hasDifficulty = true;
+                    }
+
+                    if (!$hasDifficulty) {
+                      echo "<li>No Difficulty</li>";
+                    }
+
+                    echo "
+                  </ul>
+                  <button type='button' onclick=\"removeMember('" . $member->{'member_name'} . "')\" class='btn btn-block btn-danger'>Remove</button>
+                </div>
               </div>";
             }
           }
@@ -327,4 +656,4 @@
   <script type="text/javascript" src="bootstrap/js/bootstrap-notify.min.js"></script>
   <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/census2.js"></script>
-</html>
+  </html>
