@@ -18,7 +18,7 @@
   <body>
     <?php include_once('nav.php');?>
     <form method='post' action='ajax/addMember.php' class='container' style="margin-top:75px;">
-      <button type='button' onclick='nextPage()' class="btn btn-primary" style="outline-style:none;width:60px;font-size:24px;height:60px;border-radius:100%;bottom:0; right:0;margin:50px; margin-right:50px; margin-top:20px; position:fixed;"><span class="glyphicon glyphicon-menu-right"></span></button>
+      <button type='button' onclick='nextPage()' class="btn btn-primary" style="outline-style:none;width:60px;font-size:24px;height:60px;border-radius:100%;bottom:0; right:0;margin:50px; margin-right:50px; margin-top:20px; position:fixed; z-index: 998"><span class="glyphicon glyphicon-menu-right"></span></button>
 
       <div>
         <p class='text-center'><b>HOUSEHOLD MEMBERSHIP</b></p>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.4.14
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2017 at 10:33 AM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 5.6.28
+-- Generation Time: Feb 12, 2017 at 09:23 AM
+-- Server version: 5.6.26
+-- PHP Version: 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,12 +26,12 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-CREATE TABLE `admin` (
+CREATE TABLE IF NOT EXISTS `admin` (
   `id` int(11) NOT NULL,
   `username` varchar(30) NOT NULL,
   `password` varchar(30) NOT NULL,
   `tag` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `admin`
@@ -46,7 +46,7 @@ INSERT INTO `admin` (`id`, `username`, `password`, `tag`) VALUES
 -- Table structure for table `certification`
 --
 
-CREATE TABLE `certification` (
+CREATE TABLE IF NOT EXISTS `certification` (
   `application_number` varchar(255) NOT NULL,
   `enumerator` varchar(255) NOT NULL,
   `enum_date_accomplished` date NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE `certification` (
 -- Table structure for table `geographic_information`
 --
 
-CREATE TABLE `geographic_information` (
+CREATE TABLE IF NOT EXISTS `geographic_information` (
   `application_number` varchar(30) NOT NULL,
   `province` varchar(50) NOT NULL,
   `city` varchar(50) NOT NULL,
@@ -81,10 +81,60 @@ CREATE TABLE `geographic_information` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `house`
+--
+
+CREATE TABLE IF NOT EXISTS `house` (
+  `application_number` varchar(255) NOT NULL,
+  `house_type` int(2) NOT NULL,
+  `construction` int(2) NOT NULL,
+  `materials` int(2) NOT NULL,
+  `repair` int(2) NOT NULL,
+  `built_year` datetime NOT NULL,
+  `floor_area` int(2) NOT NULL,
+  `tenure` int(2) NOT NULL,
+  `remarks` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `member`
+--
+
+CREATE TABLE IF NOT EXISTS `member` (
+  `application_number` varchar(255) NOT NULL,
+  `member_name` varchar(255) NOT NULL,
+  `member_relationship` int(2) NOT NULL,
+  `gender` int(1) NOT NULL,
+  `born_date` datetime NOT NULL,
+  `age` int(3) NOT NULL,
+  `is_registered` int(1) NOT NULL,
+  `arrangement` int(2) NOT NULL,
+  `religious` varchar(255) NOT NULL,
+  `citizenship` varchar(255) NOT NULL,
+  `ethnicity` int(2) NOT NULL,
+  `disability` int(1) NOT NULL,
+  `seeing` int(1) NOT NULL,
+  `hearing` int(1) NOT NULL,
+  `walking` int(1) NOT NULL,
+  `remembering` int(1) NOT NULL,
+  `self_caring` int(1) NOT NULL,
+  `communicating` int(1) NOT NULL,
+  `province` varchar(255) NOT NULL,
+  `city_municipality` varchar(255) NOT NULL,
+  `grade_year` int(3) NOT NULL,
+  `course` varchar(255) NOT NULL,
+  `overseas` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `summary_of_visit`
 --
 
-CREATE TABLE `summary_of_visit` (
+CREATE TABLE IF NOT EXISTS `summary_of_visit` (
   `application_number` varchar(255) NOT NULL,
   `enumerator_code` varchar(255) NOT NULL,
   `number_of_visit` int(11) NOT NULL,
@@ -100,7 +150,7 @@ CREATE TABLE `summary_of_visit` (
 -- Table structure for table `visit`
 --
 
-CREATE TABLE `visit` (
+CREATE TABLE IF NOT EXISTS `visit` (
   `application_number` varchar(255) NOT NULL,
   `visit_1` datetime NOT NULL,
   `visit_result_1` int(1) NOT NULL,
@@ -134,6 +184,18 @@ ALTER TABLE `geographic_information`
   ADD PRIMARY KEY (`application_number`);
 
 --
+-- Indexes for table `house`
+--
+ALTER TABLE `house`
+  ADD PRIMARY KEY (`application_number`);
+
+--
+-- Indexes for table `member`
+--
+ALTER TABLE `member`
+  ADD PRIMARY KEY (`application_number`,`member_name`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -141,7 +203,7 @@ ALTER TABLE `geographic_information`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
