@@ -80,7 +80,7 @@ ul > li > a:hover
 {
 	background: transparent !important;
 	border-bottom:2px solid #dc2a6c !important;
-
+	color : #000 !important;
 }
 .footer{
 	height:70px;
