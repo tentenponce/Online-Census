@@ -44,6 +44,6 @@
     $_SESSION['number_of_males'] = $_POST['number_of_males'];
     $_SESSION['number_of_females'] = $_POST['number_of_females'];
 
-    header("Location: census2.php");
+    header("Location: ../census2.php");
   }
 ?>

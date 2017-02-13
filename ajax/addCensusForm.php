@@ -2,6 +2,8 @@
   session_start();
   require "../db.php";
 
+  $members = $_SESSION['members'];
+
   //generate application number
   $seed = str_split('abcdefghijkmnopqrstuvwxyz'
                      .'ABCDEFGHJKLMNPQRSTUVWXYZ'
@@ -57,11 +59,11 @@
     "result_of_final_visit" => $_SESSION['result_of_final_visit'],
     "number_of_household_members" => $_SESSION['number_of_household_members'],
     "number_of_males" => $_SESSION['number_of_males'],
-    "visit_result_3" => $_SESSION['visit_result_3'],
     "number_of_females" => $_SESSION['number_of_females']
   ]);
 
-  $members = $_SESSION['members'];
+  var_dump($db->error());
+
   foreach ($members as $member) {
     $db->insert("member", [
       "application_number" => $application_number,
@@ -90,7 +92,10 @@
       "course" => $member->{'course'},
       "overseas" => $member->{'overseas'}
     ]);
+
+    var_dump($db->log());
   }
+
 
   $db->insert("house", [
     "application_number" => $application_number,

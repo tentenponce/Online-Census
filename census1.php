@@ -3,9 +3,9 @@
   //page kung san sila mag fifill up ng census
   $thisPage = "ApplicationForm";
 
-  if (isset($_SESSION['census_1'])) {
-    header ("Location: census2.php");
-  }
+  // if (isset($_SESSION['census_1'])) {
+  //   header ("Location: census2.php");
+  // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
