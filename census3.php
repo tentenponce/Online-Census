@@ -225,5 +225,7 @@
   <script type="text/javascript" src="js/jquery.form.js"></script>
   <script type="text/javascript" src="bootstrap/js/bootstrap-notify.min.js"></script>
   <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  
   <!-- <script type="text/javascript" src="js/census2.js"></script> -->
 </html>

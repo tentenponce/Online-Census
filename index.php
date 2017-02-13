@@ -109,7 +109,8 @@
         <span>Copyright © 2017. Alrights Reserved.</span>
       </div>
     </body>
-  <script type="text/javascript" src="bootstrap/js/bootstrap-notify.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap-notify.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
   <script>
   $(document).ready(function(){
     // Add scrollspy to <body>

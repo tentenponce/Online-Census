@@ -308,6 +308,7 @@
   </body>
   <script type="text/javascript" src="bootstrap/js/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="js/jquery.form.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript" src="bootstrap/js/bootstrap-notify.min.js"></script>
   <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 </html>
