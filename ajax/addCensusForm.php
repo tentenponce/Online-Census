@@ -62,8 +62,6 @@
     "number_of_females" => $_SESSION['number_of_females']
   ]);
 
-  var_dump($db->error());
-
   foreach ($members as $member) {
     $db->insert("member", [
       "application_number" => $application_number,
@@ -92,10 +90,7 @@
       "course" => $member->{'course'},
       "overseas" => $member->{'overseas'}
     ]);
-
-    var_dump($db->log());
   }
-
 
   $db->insert("house", [
     "application_number" => $application_number,
@@ -107,5 +102,13 @@
     "floor_area" => $_POST['floor_area'],
     "tenure" => $_POST['tenure'],
     "remarks" => $_POST['remarks']
+  ]);
+
+  date_default_timezone_set('Asia/Manila');
+  $dateToday = date('Y-m-d H:i:s');
+
+  $db->insert("application_form", [
+    "application_number" => $application_number,
+    "date_submit" => $dateToday
   ]);
 ?>

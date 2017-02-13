@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 13, 2017 at 01:51 PM
+-- Generation Time: Feb 13, 2017 at 02:20 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -43,6 +43,25 @@ INSERT INTO `admin` (`id`, `username`, `password`, `tag`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `application_form`
+--
+
+CREATE TABLE `application_form` (
+  `application_number` varchar(255) NOT NULL,
+  `date_submit` datetime NOT NULL,
+  `date_approved` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `application_form`
+--
+
+INSERT INTO `application_form` (`application_number`, `date_submit`, `date_approved`) VALUES
+('MK211414130217hS', '2017-02-13 21:14:21', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `certification`
 --
 
@@ -63,13 +82,7 @@ CREATE TABLE `certification` (
 --
 
 INSERT INTO `certification` (`application_number`, `enumerator`, `enum_date_accomplished`, `team_supervisor`, `team_date_reviewed`, `cas_acas`, `cas_date_reviewed`, `co_ro_po_supervisor`, `co_ro_po_date_reviewed`) VALUES
-('1C112413130217oP', '1', '0000-00-00', '213', '0000-00-00', '13', '0000-00-00', '213', '0000-00-00'),
-('6c4132131302179h', '1', '0000-00-00', '213', '0000-00-00', '13', '0000-00-00', '213', '0000-00-00'),
-('bm263713130217xX', '1', '0000-00-00', '213', '0000-00-00', '13', '0000-00-00', '213', '0000-00-00'),
-('L5483413130217XN', '1', '0000-00-00', '213', '0000-00-00', '13', '0000-00-00', '213', '0000-00-00'),
-('Y1102513130217vU', '1', '0000-00-00', '213', '0000-00-00', '13', '0000-00-00', '213', '0000-00-00'),
-('Zd14191313021715', '1', '0000-00-00', '213', '0000-00-00', '13', '0000-00-00', '213', '0000-00-00'),
-('Zm254313130217MG', '1', '0000-00-00', '213', '0000-00-00', '13', '0000-00-00', '213', '0000-00-00');
+('MK211414130217hS', '1', '0000-00-00', '213', '0000-00-00', '13', '0000-00-00', '213', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -96,13 +109,7 @@ CREATE TABLE `geographic_information` (
 --
 
 INSERT INTO `geographic_information` (`application_number`, `province`, `city`, `barangay`, `enumeration_area_number`, `building_serial_number`, `housing_unit_serial_number`, `household_serial_number`, `line_number_of_respondent`, `name_of_household_head`, `address`) VALUES
-('1C112413130217oP', 'Tondo', 'Manila', 'Longos', '123', '321', '321', '321', '5', 'Tenten', 'Malabon City'),
-('6c4132131302179h', 'Tondo', 'Manila', 'Longos', '123', '321', '321', '321', '5', 'Tenten', 'Malabon City'),
-('bm263713130217xX', 'Tondo', 'Manila', 'Longos', '123', '321', '321', '321', '5', 'Tenten', 'Malabon City'),
-('L5483413130217XN', 'Tondo', 'Manila', 'Longos', '123', '321', '321', '321', '5', 'Tenten', 'Malabon City'),
-('Y1102513130217vU', 'Tondo', 'Manila', 'Longos', '123', '321', '321', '321', '5', 'Tenten', 'Malabon City'),
-('Zd14191313021715', 'Tondo', 'Manila', 'Longos', '123', '321', '321', '321', '5', 'Tenten', 'Malabon City'),
-('Zm254313130217MG', 'Tondo', 'Manila', 'Longos', '123', '321', '321', '321', '5', 'Tenten', 'Malabon City');
+('MK211414130217hS', 'Tondo', 'Manila', 'Longos', '123', '321', '321', '321', '5', 'Tenten', 'Malabon City');
 
 -- --------------------------------------------------------
 
@@ -127,13 +134,7 @@ CREATE TABLE `house` (
 --
 
 INSERT INTO `house` (`application_number`, `house_type`, `construction`, `materials`, `repair`, `built_year`, `floor_area`, `tenure`, `remarks`) VALUES
-('1C112413130217oP', 1, 1, 1, 1, '1996-10-10 00:00:00', 1, 1, 'Remarking'),
-('6c4132131302179h', 1, 1, 1, 1, '1996-10-10 00:00:00', 1, 1, 'Remarking'),
-('bm263713130217xX', 1, 1, 1, 1, '1996-10-10 00:00:00', 1, 1, 'Remarking'),
-('L5483413130217XN', 1, 1, 1, 1, '1996-10-10 00:00:00', 1, 1, 'Remarking'),
-('Y1102513130217vU', 1, 1, 1, 1, '1996-10-10 00:00:00', 1, 1, 'Remarking'),
-('Zd14191313021715', 1, 1, 1, 1, '1996-10-10 00:00:00', 1, 1, 'Remarking'),
-('Zm254313130217MG', 1, 1, 1, 1, '1996-10-10 00:00:00', 1, 1, 'Remarking');
+('MK211414130217hS', 1, 1, 1, 1, '1996-10-10 00:00:00', 1, 1, 'Remarking');
 
 -- --------------------------------------------------------
 
@@ -174,10 +175,8 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`application_number`, `member_name`, `member_relationship`, `gender`, `born_date`, `age`, `is_registered`, `arrangement`, `religious`, `citizenship`, `country`, `ethnicity`, `disability`, `seeing`, `hearing`, `walking`, `remembering`, `self_caring`, `communicating`, `foreign_city`, `province`, `city_municipality`, `grade_year`, `course`, `overseas`) VALUES
-('bm263713130217xX', 'Josua', 2, 1, '1999-01-25 00:00:00', 19, 1, 1, 'Methodist', '1', '', 1, 1, NULL, 1, 1, NULL, NULL, NULL, 1, '', '', 0, '', 1),
-('bm263713130217xX', 'Tenten', 1, 1, '1996-10-10 00:00:00', 20, 1, 1, 'Methodist', '2', 'America', 1, 1, 1, 1, NULL, NULL, NULL, NULL, 2, 'Tondo', 'Manila', 900, 'BSIT', 1),
-('Zm254313130217MG', 'Josua', 2, 1, '1999-01-25 00:00:00', 19, 1, 1, 'Methodist', '1', '', 1, 1, NULL, 1, 1, NULL, NULL, NULL, 1, '', '', 0, '', 1),
-('Zm254313130217MG', 'Tenten', 1, 1, '1996-10-10 00:00:00', 20, 1, 1, 'Methodist', '2', 'America', 1, 1, 1, 1, NULL, NULL, NULL, NULL, 2, 'Tondo', 'Manila', 900, 'BSIT', 1);
+('MK211414130217hS', 'Josua', 2, 1, '1999-01-25 00:00:00', 19, 1, 1, 'Methodist', '1', '', 1, 1, NULL, 1, 1, NULL, NULL, NULL, 1, '', '', 0, '', 1),
+('MK211414130217hS', 'Tenten', 1, 1, '1996-10-10 00:00:00', 20, 1, 1, 'Methodist', '2', 'America', 1, 1, 1, 1, NULL, NULL, NULL, NULL, 2, 'Tondo', 'Manila', 900, 'BSIT', 1);
 
 -- --------------------------------------------------------
 
@@ -200,7 +199,7 @@ CREATE TABLE `summary_of_visit` (
 --
 
 INSERT INTO `summary_of_visit` (`application_number`, `enumerator_code`, `number_of_visit`, `result_of_final_visit`, `number_of_household_members`, `number_of_males`, `number_of_females`) VALUES
-('Zm254313130217MG', '231', 2, 5, 123, 5, 5);
+('MK211414130217hS', '231', 2, 5, 123, 5, 5);
 
 -- --------------------------------------------------------
 
@@ -224,13 +223,7 @@ CREATE TABLE `visit` (
 --
 
 INSERT INTO `visit` (`application_number`, `visit_1`, `visit_result_1`, `visit_2`, `visit_result_2`, `visit_3`, `visit_result_3`, `next_visit`) VALUES
-('1C112413130217oP', '1996-10-10 10:10:00', 1, '1996-02-20 12:34:00', 1, '1886-06-05 22:10:00', 1, '2016-03-03 10:10:00'),
-('6c4132131302179h', '1996-10-10 10:10:00', 1, '1996-02-20 12:34:00', 1, '1886-06-05 22:10:00', 1, '2016-03-03 10:10:00'),
-('bm263713130217xX', '1996-10-10 10:10:00', 1, '1996-02-20 12:34:00', 1, '1886-06-05 22:10:00', 1, '2016-03-03 10:10:00'),
-('L5483413130217XN', '1996-10-10 10:10:00', 1, '1996-02-20 12:34:00', 1, '1886-06-05 22:10:00', 1, '2016-03-03 10:10:00'),
-('Y1102513130217vU', '1996-10-10 10:10:00', 1, '1996-02-20 12:34:00', 1, '1886-06-05 22:10:00', 1, '2016-03-03 10:10:00'),
-('Zd14191313021715', '1996-10-10 10:10:00', 1, '1996-02-20 12:34:00', 1, '1886-06-05 22:10:00', 1, '2016-03-03 10:10:00'),
-('Zm254313130217MG', '1996-10-10 10:10:00', 1, '1996-02-20 12:34:00', 1, '1886-06-05 22:10:00', 1, '2016-03-03 10:10:00');
+('MK211414130217hS', '1996-10-10 10:10:00', 1, '1996-02-20 12:34:00', 1, '1886-06-05 22:10:00', 1, '2016-03-03 10:10:00');
 
 --
 -- Indexes for dumped tables
@@ -241,6 +234,12 @@ INSERT INTO `visit` (`application_number`, `visit_1`, `visit_result_1`, `visit_2
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `application_form`
+--
+ALTER TABLE `application_form`
+  ADD PRIMARY KEY (`application_number`);
 
 --
 -- Indexes for table `certification`

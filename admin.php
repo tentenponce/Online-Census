@@ -13,48 +13,23 @@
     <script type="text/javascript" src="bootstrap/js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="DataTables/datatables.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/admin.js"></script>
   </head>
   <body>
-    <?php
-
-      include_once("admin_nav.php");
-
-    ?>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-10 col-sm-12 col-xs-12">
-          <table class="table" id="showRecords">
-            <thead>
-              <tr>
-                <th>head</th>
-                <th>head</th>
-                <th>head</th>
-                <th>head</th>
-                <th>head</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>c</td>
-                <td>a</td>
-                <td>r</td>
-                <td>l</td>
-                <td>o</td>
-              </tr>
-              <tr>
-                <td>c</td>
-                <td>a</td>
-                <td>r</td>
-                <td>l</td>
-                <td>o</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-md-1"></div>
-      </div>
+    <?php include_once("admin_nav.php"); ?>
+    <div class="container">
+      <table class="table" id="showRecords">
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>Application Number</th>
+            <th>Date Submit</th>
+            <th>Date Approved</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
     </div>
-  </<body>
+  </body>
+  <script src="js/admin.js"></script>
 </html>
