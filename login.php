@@ -4,15 +4,19 @@
 	require_once 'db.php';
 	//if may database na
 	if(isset($_POST['Login'])){
-	// 	$uName = $_POST['Uname'];
-	// 	$uPass = $_POST['Upass'];
-	// 	$accountDatas = $db -> select("",["","","","",""],["AND"=>[""=> , ""=> ]]);
-	// 	if(count($accountData > 0)){
-	// 		foreach($accountDatas as $accountData){
-	// 			$_SESSION['account'] = $accountData;
+		$uName = $_POST['Uname'];
+		$uPass = $_POST['Upass'];
+		$accountDatas = $db -> select("admin",["id","username","password","tag"],["AND"=>["username"=> $uName , "password"=> $uPass ]]);
+		if(count($accountData > 0)){
+			foreach($accountDatas as $accountData){
+				$_SESSION['account'] = $accountData;
 				header("Location:admin.php");
-	// 		}
-	// 	}
+			}
+		}
+	}
+	if(isset($_SESSION['account']))
+	{
+		header("location:admin.php");
 	}
 
 

@@ -10,7 +10,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
     <ul class="nav navbar-nav navbar-right" id="myNavbar">
-      <li><a href="#">Log Out</a></li>
+      <li><a href="admin.php?logout=1">Log Out</a></li>
     </ul>
     </div>
   </div>
