@@ -372,7 +372,6 @@
                 <div class="form-group">
                   <label><small></small></label>
                   <span id="built_year"></span><br/>
-                  <input id='built_year_input' class="form-control" type='date' name='built_year' required>
                 </div>
               </div>
               <!--floor_area-->
