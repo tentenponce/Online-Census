@@ -111,4 +111,7 @@
     "application_number" => $application_number,
     "date_submit" => $dateToday
   ]);
+
+  // session_destroy(); //unccomment for debugging purposes
+  header ("Location: ../censusFinish.php?application_number=" . $application_number);
 ?>

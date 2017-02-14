@@ -18,7 +18,7 @@
       <li class="<?php if($thisPage=='Home'){echo 'active'; }?>"><a href="<?php if($thisPage=='Home'){echo '#section1';} elseif($thisPage=='ApplicationForm'){echo 'index.php';}?>">Home</a></li>
       <li <?php if($thisPage=='ApplicationForm'){echo 'style="display:none;"';}?>><a href="#section2">Announcements</a></li>
       <li <?php if($thisPage=='ApplicationForm'){echo 'style="display:none;"';}?>><a href="#section41">E-Census</a></li>
-      <li class="<?php if($thisPage=='ApplicationForm'){echo 'active'; }?>" <?php if($thisPage=='Home'){echo 'style="display:none;"';}?>><a href="census.php">Application Form</a></li>
+      <li class="<?php if($thisPage=='ApplicationForm'){echo 'active'; }?>" <?php if($thisPage=='Home'){echo 'style="display:none;"';}?>><a href="census1.php">Application Form</a></li>
 
       <li><a href="#"></a></li>
     </ul>
@@ -26,7 +26,7 @@
       <div class="navbar-form">
          <input type="text" class="form-control" placeholder="Search" id="input_search">
          <div class="input-group-btn">
-           <button class="btn btn-default" type="submit" data-toggle="modal" data-target="#searchModal"  onClick="applicationSearch();">
+           <button class="btn btn-default" type="submit" onClick="applicationSearch();">
              <i class="glyphicon glyphicon-search"></i>
            </button>
          </div>
@@ -40,7 +40,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
+        <h4 class="modal-title">Census Form</h4>
       </div>
       <div class="modal-body">
         <!-- Nav tabs -->
@@ -53,43 +53,7 @@
         <!-- Tab panes -->
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="firstPage">
-            <div class='row'>
-              <div class='col-md-4 border-right'>
-                <p><b>CPH FORM 2</b></p>
-                <br />
-                <p>
-                  <small>
-                    <b>AUTHORITY:</b><br />
-                      Commonwealth Act No. 591, Batas Pambansa Blg. 72, and Executive Order No. 121 authorize the National Statistics Office (NSO) to conduct and collect information for this census.
-                  </small>
-                </p>
-                <p>
-                  <small>
-                    <b>CONFIDENTIALITY:</b>
-                    <br />
-                    Section 4 of Commonwealth Act No. 591 provides that all information furnished in this questionnaire shall be kept STRICTLY CONFIDENTIAL.
-                  </small>
-                </p>
-              </div>
-
-              <div class='col-md-8 text-center'>
-                <p>
-                  <br />
-                  <i>Republic of the Philippines</i>
-                  <br />
-                  <b>NATIONAL STATISTICS OFFICE</b>
-                  <br />
-                  <br />
-                  <br />
-                  <b>CENSUS OF POPULATION AND HOUSING</b>
-                  <br />
-                </p>
-                <h4><b>COMMON HOUSEHOLD QUESTIONNAIRE</b></h4>
-              </div>
-
-            </div>
-
-            <hr />
+            <br />
 
             <div class='row'>
               <div class='col-md-4 text-center'>
@@ -321,16 +285,6 @@
                 </div>
               </div>
             </div>
-
-            <hr />
-
-            <div>
-              <p class='text-center'><b>HOUSEHOLD DEFINITION</b></p>
-
-              <p class='text-center'>
-                A <b>household</b> is a social unit consisting of a person living alone or a group of persons who sleep in the same housing unit and have a common arrangement in the preparation and consumption of food.
-              </p>
-            </div>
           </div>
 
           <div role="tabpanel" class="tab-pane" id="secondPage">
@@ -340,8 +294,7 @@
           </div>
 
           <div role="tabpanel" class="tab-pane" id="thirdPage">
-            <h4 class='text-center'><b>Form 2D</b></h4>
-            <hr />
+            <br />
             <div class='row'>
               <!--house_type-->
               <div class='col-md-6'>
@@ -398,7 +351,6 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div><!-- /.modal-content -->

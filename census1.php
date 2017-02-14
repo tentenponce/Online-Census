@@ -73,7 +73,7 @@
             </div>
 
             <div class="form-group">
-              <input name='enum_date_accomplished' type="text" class="form-control" required>
+              <input name='enum_date_accomplished' type="date" class="form-control" required>
               <label><small>DATE ACCOMPLISHED</small></label>
             </div>
 
@@ -83,7 +83,7 @@
             </div>
 
             <div class="form-group">
-              <input type="text" class="form-control" name='team_date_reviewed' required>
+              <input type="date" class="form-control" name='team_date_reviewed' required>
               <label><small>DATE REVIEWED</small></label>
             </div>
 
@@ -93,7 +93,7 @@
             </div>
 
             <div class="form-group">
-              <input type="text" class="form-control" name='cas_date_reviewed' required>
+              <input type="date" class="form-control" name='cas_date_reviewed' required>
               <label><small>DATE REVIEWED</small></label>
             </div>
 
@@ -103,7 +103,7 @@
             </div>
 
             <div class="form-group">
-              <input type="text" class="form-control" name='co_ro_po_date_reviewed' required>
+              <input type="date" class="form-control" name='co_ro_po_date_reviewed' required>
               <label><small>DATE REVIEWED</small></label>
             </div>
           </div>
