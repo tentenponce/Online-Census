@@ -38,8 +38,17 @@
       </div>
       <div id="section2" class="container-fluid">
         <div class="message2">
-          <h1 class="header wow bounceInUp"  data-wow-offset="10">Announcements</h1>
-          <span class="wow slideInRight"></span>
+          <h1 class="header wow bounceInUp  text-center"  data-wow-offset="10">Announcements</h1>
+          <br/>
+          <br/>
+          <br/>
+
+          <h2 class="wow slideInRight text-center">
+            <p class="glyphicon glyphicon-tag header text-center"></p>
+            <br/>
+            No Announcements as of today.
+          </h2>
+          <span></span>
         </div>
       </div>
       <div id="section41" class="container-fluid">
@@ -47,8 +56,8 @@
             <h1 class="header wow bounceInLeft">Application Form</h1>
           </div>
           <div class="container">
-            <p>slight screenshot of the application form photoshoped...</p>
-          </div>
+            <p class="col-md-4 col-xs-12 col-sm-12"></p>
+          </div><br/>
           <div class="container">
             <div style="float:right;bottom:10;">
               <a href="census1.php"><button class = "btn-lg btn btn-default wow tada">Application Form</button></a>
@@ -93,7 +102,9 @@
             </div>
             <div class="col-md-3">
               <h3>Contact number</h3>
-              <h3>Email us at :</h3>
+              <br/><span style="font-size:16px;">&nbsp; 0935-867-1004</span>
+              <h3>Email us at : </h3>
+               <br/><span style="font-size:16px;">&nbsp; onlinecensus@onlinecensus.com</span>
             </div>
           </div>
           <div class="row">
