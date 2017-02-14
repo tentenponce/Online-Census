@@ -1,9 +1,96 @@
 function applicationSearch(){
   var application_number = $("#input_search").val();
 
-  $.get("ajax/showCensusForm3.php", {application_number : application_number}, function(data) {
+  $.post("ajax/showDatas.php", {application_number : application_number}, function(data) {
     var datas = $.parseJSON(data);
-
+    $("#enum").html(datas[0].enumerator);
+           $("#enum_date_accomplished").html(datas[0].enum_date_accomplished);
+           $("#team_supervisor").html(datas[0].team_supervisor);
+           $("#team_date_reviewed").html(datas[0].team_date_reviewed);
+           $("#cas_acas").html(datas[0].cas_acas);
+           $("#cas_date_reviewed").html(datas[0].cas_date_reviewed);
+           $("#co_ro_po_supervisor").html(datas[0].co_ro_po_supervisor);
+           $("#co_ro_po_date_reviewed").html(datas[0].co_ro_po_date_reviewed);
+           $("#province").html(datas[0].province);
+           $("#city").html(datas[0].city);
+           $("#barangay").html(datas[0].barangay);
+           $("#enumeration_area_number").html(datas[0].enumeration_area_number);
+           $("#building_serial_number").html(datas[0].building_serial_number);
+           $("#housing_unit_serial_number").html(datas[0].housing_unit_serial_number);
+           $("#household_serial_number").html(datas[0].household_serial_number);
+           $("#line_number_of_respondent").html(datas[0].line_number_of_respondent);
+           $("#name_of_household_head").html(datas[0].name_of_household_head);
+           $("#address").html(datas[0].address);
+           $("#visit_1").html(datas[0].visit_1);
+           switch(parseInt(datas[0].visit_result_1)){
+             case 1:
+               $("#visit_result_1").html("Completed");
+               break;
+             case 2:
+               $("#visit_result_1").html("Partly completed");
+               break;
+             case 3:
+               $("#visit_result_1").html("Refused");
+               break;
+             case 4:
+               $("#visit_result_1").html("Postponed");
+               break;
+             case 5:
+               $("#visit_result_1").html("House hold is temporarily away/no respondent around");
+               break;
+             case 6:
+               $("#visit_result_1").html("Others");
+               break;
+           }
+           $("#visit_2").html(datas[0].visit_2);
+           switch(parseInt(datas[0].visit_result_2)){
+             case 1:
+               $("#visit_result_2").html("Completed");
+            break;
+            case 2:
+              $("#visit_result_2").html("Partly completed");
+              break;
+           case 3:
+               $("#visit_result_2").html("Refused");
+               break;
+            case 4:
+              $("#visit_result_2").html("Postponed");
+            break;
+             case 5:
+               $("#visit_result_2").html("House hold is temporarily away/no respondent around");
+               break;
+             case 6:
+              $("#visit_result_2").html("Others");
+              break;
+          }
+           $("#visit_3").html(datas[0].visit_3);
+          switch(parseInt(datas[0].visit_result_3)){
+             case 1:
+               $("#visit_result_3").html("Completed");
+              break;
+             case 2:
+               $("#visit_result_3").html("Partly completed");
+               break;
+             case 3:
+               $("#visit_result_3").html("Refused");
+               break;
+             case 4:
+               $("#visit_result_3").html("Postponed");
+               break;
+             case 5:
+               $("#visit_result_3").html("House hold is temporarily away/no respondent around");
+             break;
+             case 6:
+               $("#visit_result_3").html("Others");
+               break;
+          }
+        $("#next_visit").html(datas[0].next_visit);
+          $("#next_enumerator_codevisit").html(datas[0].enumerator_code);
+           $("#number_of_visit").html(datas[0].number_of_visit);
+           $("#result_of_final_visit").html(datas[0].result_of_final_visit);
+           $("#number_of_household_members").html(datas[0].number_of_household_members);
+           $("#number_of_males").html(datas[0].number_of_males);
+           $("#number_of_females").html(datas[0].number_of_females);
     if(parseInt(datas[0].house_type) == 1){
       $("#house_type").html("Single House");
     }
