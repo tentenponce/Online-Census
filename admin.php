@@ -7,8 +7,6 @@
   if(isset($_GET['logout']))
   {
     session_destroy();
-    header("location:admin.php");
-    exit();
   }
   //dito ung datatables ng census forms. One page lng ang admin
 ?>
