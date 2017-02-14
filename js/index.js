@@ -151,6 +151,5 @@ function applicationSearch(){
 
   $.get("ajax/showCensusForm2.php", {application_number : application_number}, function(data) {
     $("#secondPage").find("#member_div").html(data);
->>>>>>> 292055f56fb9faa8a8c21b5ad1fa7b68b316fd2a
   });
 }
