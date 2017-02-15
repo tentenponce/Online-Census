@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.4.14
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 13, 2017 at 02:20 PM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 5.6.28
+-- Generation Time: Feb 15, 2017 at 02:37 AM
+-- Server version: 5.6.26
+-- PHP Version: 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,12 +26,12 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-CREATE TABLE `admin` (
+CREATE TABLE IF NOT EXISTS `admin` (
   `id` int(11) NOT NULL,
   `username` varchar(30) NOT NULL,
   `password` varchar(30) NOT NULL,
   `tag` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `admin`
@@ -46,18 +46,20 @@ INSERT INTO `admin` (`id`, `username`, `password`, `tag`) VALUES
 -- Table structure for table `application_form`
 --
 
-CREATE TABLE `application_form` (
+CREATE TABLE IF NOT EXISTS `application_form` (
   `application_number` varchar(255) NOT NULL,
   `date_submit` datetime NOT NULL,
-  `date_approved` datetime DEFAULT NULL
+  `date_approved` datetime NOT NULL,
+  `is_approve` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `application_form`
 --
 
-INSERT INTO `application_form` (`application_number`, `date_submit`, `date_approved`) VALUES
-('MK211414130217hS', '2017-02-13 21:14:21', NULL);
+INSERT INTO `application_form` (`application_number`, `date_submit`, `date_approved`, `is_approve`) VALUES
+('MK211414130217hS', '2017-02-13 21:14:21', '2017-02-15 09:31:12', 1),
+('Nf405415140217uC', '2017-02-14 22:54:40', '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -65,7 +67,7 @@ INSERT INTO `application_form` (`application_number`, `date_submit`, `date_appro
 -- Table structure for table `certification`
 --
 
-CREATE TABLE `certification` (
+CREATE TABLE IF NOT EXISTS `certification` (
   `application_number` varchar(255) NOT NULL,
   `enumerator` varchar(255) NOT NULL,
   `enum_date_accomplished` date NOT NULL,
@@ -82,7 +84,8 @@ CREATE TABLE `certification` (
 --
 
 INSERT INTO `certification` (`application_number`, `enumerator`, `enum_date_accomplished`, `team_supervisor`, `team_date_reviewed`, `cas_acas`, `cas_date_reviewed`, `co_ro_po_supervisor`, `co_ro_po_date_reviewed`) VALUES
-('MK211414130217hS', '1', '0000-00-00', '213', '0000-00-00', '13', '0000-00-00', '213', '0000-00-00');
+('MK211414130217hS', '1', '0000-00-00', '213', '0000-00-00', '13', '0000-00-00', '213', '0000-00-00'),
+('Nf405415140217uC', 'enumarator1', '1996-10-10', 'Tenten Supervisor', '1996-10-10', 'Cinascas', '1996-09-10', 'Supervisor of COROPO', '1990-01-01');
 
 -- --------------------------------------------------------
 
@@ -90,7 +93,7 @@ INSERT INTO `certification` (`application_number`, `enumerator`, `enum_date_acco
 -- Table structure for table `geographic_information`
 --
 
-CREATE TABLE `geographic_information` (
+CREATE TABLE IF NOT EXISTS `geographic_information` (
   `application_number` varchar(30) NOT NULL,
   `province` varchar(50) NOT NULL,
   `city` varchar(50) NOT NULL,
@@ -109,7 +112,8 @@ CREATE TABLE `geographic_information` (
 --
 
 INSERT INTO `geographic_information` (`application_number`, `province`, `city`, `barangay`, `enumeration_area_number`, `building_serial_number`, `housing_unit_serial_number`, `household_serial_number`, `line_number_of_respondent`, `name_of_household_head`, `address`) VALUES
-('MK211414130217hS', 'Tondo', 'Manila', 'Longos', '123', '321', '321', '321', '5', 'Tenten', 'Malabon City');
+('MK211414130217hS', 'Tondo', 'Manila', 'Longos', '123', '321', '321', '321', '5', 'Tenten', 'Malabon City'),
+('Nf405415140217uC', 'Tondo', 'Manila', 'Longos', 'Are number 123', 'Serial number NA', 'Housing Unit SA NA', 'Household serial number NA', '5', 'Tenten Household Head', 'Lot 4 Block 41B Malabon City');
 
 -- --------------------------------------------------------
 
@@ -117,7 +121,7 @@ INSERT INTO `geographic_information` (`application_number`, `province`, `city`, 
 -- Table structure for table `house`
 --
 
-CREATE TABLE `house` (
+CREATE TABLE IF NOT EXISTS `house` (
   `application_number` varchar(255) NOT NULL,
   `house_type` int(2) NOT NULL,
   `construction` int(2) NOT NULL,
@@ -134,7 +138,8 @@ CREATE TABLE `house` (
 --
 
 INSERT INTO `house` (`application_number`, `house_type`, `construction`, `materials`, `repair`, `built_year`, `floor_area`, `tenure`, `remarks`) VALUES
-('MK211414130217hS', 1, 1, 1, 1, '1996-10-10 00:00:00', 1, 1, 'Remarking');
+('MK211414130217hS', 1, 1, 1, 1, '1996-10-10 00:00:00', 1, 1, 'Remarking'),
+('Nf405415140217uC', 1, 1, 1, 1, '1996-10-10 00:00:00', 1, 1, 'Remarkable');
 
 -- --------------------------------------------------------
 
@@ -142,7 +147,7 @@ INSERT INTO `house` (`application_number`, `house_type`, `construction`, `materi
 -- Table structure for table `member`
 --
 
-CREATE TABLE `member` (
+CREATE TABLE IF NOT EXISTS `member` (
   `application_number` varchar(255) NOT NULL,
   `member_name` varchar(255) NOT NULL,
   `member_relationship` int(2) DEFAULT NULL,
@@ -176,7 +181,9 @@ CREATE TABLE `member` (
 
 INSERT INTO `member` (`application_number`, `member_name`, `member_relationship`, `gender`, `born_date`, `age`, `is_registered`, `arrangement`, `religious`, `citizenship`, `country`, `ethnicity`, `disability`, `seeing`, `hearing`, `walking`, `remembering`, `self_caring`, `communicating`, `foreign_city`, `province`, `city_municipality`, `grade_year`, `course`, `overseas`) VALUES
 ('MK211414130217hS', 'Josua', 2, 1, '1999-01-25 00:00:00', 19, 1, 1, 'Methodist', '1', '', 1, 1, NULL, 1, 1, NULL, NULL, NULL, 1, '', '', 0, '', 1),
-('MK211414130217hS', 'Tenten', 1, 1, '1996-10-10 00:00:00', 20, 1, 1, 'Methodist', '2', 'America', 1, 1, 1, 1, NULL, NULL, NULL, NULL, 2, 'Tondo', 'Manila', 900, 'BSIT', 1);
+('MK211414130217hS', 'Tenten', 1, 1, '1996-10-10 00:00:00', 20, 1, 1, 'Methodist', '2', 'America', 1, 1, 1, 1, NULL, NULL, NULL, NULL, 2, 'Tondo', 'Manila', 900, 'BSIT', 1),
+('Nf405415140217uC', 'Carlo', 2, 2, '1996-10-10 00:00:00', 3, 1, 1, 'Dating Daan', '1', '', 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, 1, '', '', 0, '', 1),
+('Nf405415140217uC', 'Tenten', 1, 2, '1996-10-11 00:00:00', 20, 1, 1, 'Methodist', '2', 'America', 1, 1, 1, 1, 1, 1, NULL, NULL, 2, 'Tondo', 'Manila', 900, 'BSIT', 1);
 
 -- --------------------------------------------------------
 
@@ -184,7 +191,7 @@ INSERT INTO `member` (`application_number`, `member_name`, `member_relationship`
 -- Table structure for table `summary_of_visit`
 --
 
-CREATE TABLE `summary_of_visit` (
+CREATE TABLE IF NOT EXISTS `summary_of_visit` (
   `application_number` varchar(255) NOT NULL,
   `enumerator_code` varchar(255) NOT NULL,
   `number_of_visit` int(11) NOT NULL,
@@ -199,7 +206,8 @@ CREATE TABLE `summary_of_visit` (
 --
 
 INSERT INTO `summary_of_visit` (`application_number`, `enumerator_code`, `number_of_visit`, `result_of_final_visit`, `number_of_household_members`, `number_of_males`, `number_of_females`) VALUES
-('MK211414130217hS', '231', 2, 5, 123, 5, 5);
+('MK211414130217hS', '231', 2, 5, 123, 5, 5),
+('Nf405415140217uC', 'CodeEnumator123', 3, 5, 5, 2, 3);
 
 -- --------------------------------------------------------
 
@@ -207,7 +215,7 @@ INSERT INTO `summary_of_visit` (`application_number`, `enumerator_code`, `number
 -- Table structure for table `visit`
 --
 
-CREATE TABLE `visit` (
+CREATE TABLE IF NOT EXISTS `visit` (
   `application_number` varchar(255) NOT NULL,
   `visit_1` datetime NOT NULL,
   `visit_result_1` int(1) NOT NULL,
@@ -223,7 +231,8 @@ CREATE TABLE `visit` (
 --
 
 INSERT INTO `visit` (`application_number`, `visit_1`, `visit_result_1`, `visit_2`, `visit_result_2`, `visit_3`, `visit_result_3`, `next_visit`) VALUES
-('MK211414130217hS', '1996-10-10 10:10:00', 1, '1996-02-20 12:34:00', 1, '1886-06-05 22:10:00', 1, '2016-03-03 10:10:00');
+('MK211414130217hS', '1996-10-10 10:10:00', 1, '1996-02-20 12:34:00', 1, '1886-06-05 22:10:00', 1, '2016-03-03 10:10:00'),
+('Nf405415140217uC', '1996-10-10 10:10:00', 1, '1996-10-10 10:10:00', 1, '1996-10-10 10:10:00', 1, '1996-10-10 10:10:00');
 
 --
 -- Indexes for dumped tables
@@ -285,7 +294,7 @@ ALTER TABLE `visit`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
