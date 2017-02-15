@@ -60,9 +60,13 @@ $(document).ready(function() {
           });
         }
     });
+    $("#showRecords").on("click", '.print_btn',function() {
+      var datas = showRecords.row($(this).closest('tr')).data();
 
+      window.open("printForm.php?application_id=" + datas['application_number']);
+    });
     $("#showRecords").on("click", '.view_btn', function() {
-        var data = showRecords.row($(this).closest('tr')).data();
+      var data = showRecords.row($(this).closest('tr')).data();
 
         $("#application_id").html(data["application_number"]);
 
