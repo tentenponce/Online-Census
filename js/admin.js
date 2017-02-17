@@ -64,6 +64,14 @@ $(document).ready(function() {
     $("#showRecords").on("click", '.print_btn',function() {
       var datas = showRecords.row($(this).closest('tr')).data();
 
+      var win = window.open("printApplicationNumber.php?application_number=" + datas[0], '_blank');
+      if (win) {
+          //Browser has allowed it to be opened
+          win.focus();
+      } else {
+          //Browser has blocked it
+          alert('Please allow popups for this website');
+      }
     });
 
     $("#showRecords").on("click", '.view_btn', function() {

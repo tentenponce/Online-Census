@@ -1,12 +1,11 @@
 <?php //BACK END
   session_start();
   require "db.php";
-  if($_SESSION['account'] == null)
-  {
+  if($_SESSION['account'] == null) {
     header("location:login.php");
   }
-  if(isset($_GET['logout']))
-  {
+
+  if(isset($_GET['logout'])) {
     session_destroy();
     header("location:admin.php");
     exit();
@@ -377,5 +376,5 @@
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
-  <script src="js/admin.js"></script>
+  <script src="js/admin.js?1"></script>
 </html>
