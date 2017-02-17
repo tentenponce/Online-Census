@@ -2,6 +2,10 @@ $(document).ready(function() {
   updateHousehold();
 });
 
+function addMemberSubmit() {
+  $("#age_input").removeAttr("disabled");
+}
+
 function addMember() {
   updateHousehold();
   return false;
@@ -93,4 +97,15 @@ function ageKeyUp() {
   if (parseInt(age_input) >= 10) {
     $("#10_year_div").show();
   }
+}
+
+function bornDateChange() {
+  var bornDate = $("#born_date_input").val();
+
+  bornDate = new Date(bornDate);
+  var today = new Date();
+  var age = Math.floor((today-bornDate) / (365.25 * 24 * 60 * 60 * 1000));
+
+  $('#age_input').val(age);
+  ageKeyUp();
 }

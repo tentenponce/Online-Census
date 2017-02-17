@@ -2,6 +2,9 @@
   session_start();
   require "../db.php";
 
+  date_default_timezone_set('Asia/Manila');
+  $dateToday = date('Y-m-d H:i:s');
+
   $members = $_SESSION['members'];
 
   //generate application number
@@ -43,12 +46,8 @@
 
   $db->insert("visit", [
     "application_number" => $application_number,
-    "visit_1" => $_SESSION['visit_1'],
-    "visit_result_1" => $_SESSION['visit_result_1'],
-    "visit_2" => $_SESSION['visit_2'],
-    "visit_result_2" => $_SESSION['visit_result_2'],
-    "visit_3" => $_SESSION['visit_3'],
-    "visit_result_3" => $_SESSION['visit_result_3'],
+    "date_visit" => $dateToday,
+    "result_visit" => $_SESSION['result_visit'],
     "next_visit" => $_SESSION['next_visit']
   ]);
 
@@ -103,9 +102,6 @@
     "tenure" => $_POST['tenure'],
     "remarks" => $_POST['remarks']
   ]);
-
-  date_default_timezone_set('Asia/Manila');
-  $dateToday = date('Y-m-d H:i:s');
 
   $db->insert("application_form", [
     "application_number" => $application_number,

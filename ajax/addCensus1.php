@@ -3,6 +3,9 @@
     session_start();
     require "../db.php";
 
+    date_default_timezone_set('Asia/Manila');
+    $dateToday = date('Y-m-d H:i:s');
+
     $_SESSION['census_1'] = 1; //census application form 1 is finsihed answering
 
     //=====CERTIFICATION======//
@@ -28,12 +31,8 @@
     $_SESSION['address'] = $_POST['address'];
 
     //============VISIT===============/
-    $_SESSION['visit_1'] = $_POST['visit_1'];
-    $_SESSION['visit_result_1'] = $_POST['visit_result_1'];
-    $_SESSION['visit_2'] = $_POST['visit_2'];
-    $_SESSION['visit_result_2'] = $_POST['visit_result_2'];
-    $_SESSION['visit_3'] = $_POST['visit_3'];
-    $_SESSION['visit_result_3'] = $_POST['visit_result_3'];
+    $_SESSION['date_visit'] = $dateToday;
+    $_SESSION['result_visit'] = $_POST['result_visit'];
     $_SESSION['next_visit'] = $_POST['next_visit'];
 
     //=============SUMMARY OF VISIT==============//

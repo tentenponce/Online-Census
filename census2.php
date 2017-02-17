@@ -18,7 +18,7 @@
   </head>
   <body>
     <?php include_once('nav.php');?>
-    <form method='post' action='ajax/addMember.php' class='container' style="margin-top:75px;">
+    <form onsubmit="addMemberSubmit()" method='post' action='ajax/addMember.php' class='container' style="margin-top:75px;">
       <button type='button' onclick='nextPage()' class="btn btn-primary" style="outline-style:none;width:60px;font-size:24px;height:60px;border-radius:100%;bottom:0; right:0;margin:50px; margin-right:50px; margin-top:20px; position:fixed; z-index: 998"><span class="glyphicon glyphicon-menu-right"></span></button>
 
       <div>
@@ -85,12 +85,11 @@
         <div class='col-md-3'>
           <p class='title'>Is <span class='household_member_name_span'></span> male or female?</p>
 
-          <div class="form-group">
-            <label><small>Gender</small></label>
-            <select class='form-control' name='gender' required>
-              <option value='1'>Female</option>
-              <option value='2'>Male</option>
-            </select>
+          <div class="radio">
+            <label><input type="radio" name="gender" value='1' required>Female</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="gender" value='2' required>Male</label>
           </div>
         </div>
         <!--born_date-->
@@ -98,7 +97,7 @@
           <p class='title'>In what date was <span class='household_member_name_span'></span> born?</p>
 
           <div class="form-group">
-            <input type="date" class="form-control" name='born_date' required>
+            <input id='born_date_input' onkeyup='bornDateChange()' type="date" class="form-control" name='born_date' required>
           </div>
         </div>
         <div class='col-md-12'><br /></div>
@@ -107,7 +106,7 @@
           <p class='title'>What is <span class='household_member_name_span'></span>'s age as of his/her last birthday?</p>
 
           <div class="form-group">
-            <input onkeyup='ageKeyUp()' id='age_input' type="number" class="form-control" name='age' required>
+            <input onkeyup='ageKeyUp()' id='age_input' type="number" class="form-control" name='age' disabled>
             <label><small></small></label>
           </div>
         </div>
@@ -125,7 +124,7 @@
         </div>
         <!--arrangement-->
         <div class='col-md-3'>
-          <p class='title'>Is <span class='household_member_name_span'></span> single, married, widowed, divorced/separated, or in a comon-law/live-in arrangement?</p>
+          <p class='title'>Is <span class='household_member_name_span'></span> single, married, widowed, divorced/separated, or in a common-law/live-in arrangement?</p>
 
           <div class="form-group">
             <select class='form-control' name='arrangement' required>

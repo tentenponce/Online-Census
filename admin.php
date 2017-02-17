@@ -1,5 +1,6 @@
 <?php //BACK END
   session_start();
+  require "db.php";
   if($_SESSION['account'] == null)
   {
     header("location:login.php");
@@ -10,7 +11,9 @@
     header("location:admin.php");
     exit();
   }
-  //dito ung datatables ng census forms. One page lng ang admin
+
+  $males = $db->sum("summary_of_visit", "number_of_males");
+  $females = $db->sum("summary_of_visit", "number_of_females");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,6 +45,14 @@
         <tbody>
         </tbody>
       </table>
+
+      <hr />
+
+      <h2>Reports</h2>
+      <div>
+        <p><b>Number of Males: </b><?php echo $males; ?></p>
+        <p><b>Number of Females: </b><?php echo $females; ?></p>
+      </div>
     </div>
   </body>
   <div class="modal fade" tabindex="-1" role="dialog" id="viewModal">

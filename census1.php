@@ -176,67 +176,14 @@
       <div class='row'>
 
         <div class='col-md-6 row'>
-          <div class='col-md-4 text-center'>
-            <p><b>VISIT NUMBER 1</b></p>
+          <p class='text-center'><b>VISIT</b></p>
+          <hr />
 
-            <hr />
-
-            <div class="form-group">
-              <input type="datetime-local" class="form-control" name='visit_1' required>
-              <label><small>DATE OF VISIT</small></label>
-            </div>
+          <div class='col-md-12 text-center'>
 
             <div class="form-group">
               <label><small>RESULT OF VISIT</small></label>
-              <select class='form-control' name='visit_result_1' required>
-                <option value='1'>Completed</option>
-                <option value='2'>Partly completed</option>
-                <option value='3'>Refused</option>
-                <option value='4'>Postponed</option>
-                <option value='5'>House hold is temporarily away/no respondent around</option>
-                <option value='6'>Others</option>
-              </select>
-            </div>
-
-          </div>
-
-          <div class='col-md-4 text-center border-left'>
-            <p><b>VISIT NUMBER 2</b></p>
-
-            <hr />
-
-            <div class="form-group">
-              <input type="datetime-local" class="form-control" name='visit_2' required>
-              <label><small>DATE OF VISIT</small></label>
-            </div>
-
-            <div class="form-group">
-              <label><small>RESULT OF VISIT</small></label>
-              <select class='form-control' name='visit_result_2' required>
-                <option value='1'>Completed</option>
-                <option value='2'>Partly completed</option>
-                <option value='3'>Refused</option>
-                <option value='4'>Postponed</option>
-                <option value='5'>House hold is temporarily away/no respondent around</option>
-                <option value='6'>Others</option>
-              </select>
-            </div>
-
-          </div>
-
-          <div class='col-md-4 text-center border-left'>
-            <p><b>VISIT NUMBER 3</b></p>
-
-            <hr />
-
-            <div class="form-group">
-              <input type="datetime-local" class="form-control" name='visit_3' required>
-              <label><small>DATE OF VISIT</small></label>
-            </div>
-
-            <div class="form-group">
-              <label><small>RESULT OF VISIT</small></label>
-              <select class='form-control' name='visit_result_3' required>
+              <select class='form-control' name='result_visit' required>
                 <option value='1'>Completed</option>
                 <option value='2'>Partly completed</option>
                 <option value='3'>Refused</option>

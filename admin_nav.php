@@ -9,9 +9,9 @@
       <p class="navbar-text" style="font-weight:bold;">Online Census</p>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-    <ul class="nav navbar-nav navbar-right" id="myNavbar">
-      <li><a href="?logout=1">Log Out</a></li>
-    </ul>
+      <ul class="nav navbar-nav navbar-right" id="myNavbar">
+        <li><a href="?logout=1">Log Out</a></li>
+      </ul>
     </div>
   </div>
 </nav>
