@@ -16,6 +16,7 @@ function applicationSearch() {
         }
 
         $("#searchModal").modal("show");
+        $("#searchModal").data("application_number", application_number);
         $("#enum").html(datas[0].enumerator);
         $("#enum_date_accomplished").html(datas[0].enum_date_accomplished);
         $("#team_supervisor").html(datas[0].team_supervisor);
@@ -216,4 +217,9 @@ function applicationSearch() {
     }, function(data) {
         $("#secondPage").find("#member_div").html(data);
     });
+}
+
+function printForm() {
+  var application_number = $("#searchModal").data("application_number");
+  window.open("printForm.php?application_id=" + application_number);
 }
