@@ -1,6 +1,5 @@
 function applicationSearch() {
     var application_number = $("#input_search").val();
-
     if (application_number.length <= 0) {
         return;
     }
@@ -25,7 +24,7 @@ function applicationSearch() {
         $("#cas_date_reviewed").html(datas[0].cas_date_reviewed);
         $("#co_ro_po_supervisor").html(datas[0].co_ro_po_supervisor);
         $("#co_ro_po_date_reviewed").html(datas[0].co_ro_po_date_reviewed);
-        $("#province").html(datas[1].province);
+        $("#province").html(datas[0].province);
         $("#city").html(datas[0].city);
         $("#barangay").html(datas[0].barangay);
         $("#enumeration_area_number").html(datas[0].enumeration_area_number);

@@ -43,13 +43,14 @@
         <h4 class="modal-title">Census Form</h4>
       </div>
       <div class="modal-body">
+        <button onclick='printForm()' type="button" class="btn btn-primary" data-dismiss="modal">Print</button><br/>
+
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
           <li role="presentation" class="active"><a href="#firstPage" aria-controls="home" role="tab" data-toggle="tab">First Page</a></li>
           <li role="presentation"><a href="#secondPage" aria-controls="profile" role="tab" data-toggle="tab">Second Page</a></li>
           <li role="presentation"><a href="#thirdPage" aria-controls="messages" role="tab" data-toggle="tab">Third Page</a></li>
         </ul>
-
         <!-- Tab panes -->
         <div class="tab-content">
           <div role="tabpanel" class="tab-pane active" id="firstPage">
@@ -296,7 +297,6 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button id='print_btn' onclick='printForm()' type="button" class="btn btn-default" data-dismiss="modal">Print</button>
         </div>
       </div>
     </div><!-- /.modal-content -->

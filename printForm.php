@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/census.css">
   </head>
-  <body onload="window.print();">
+  <body onload="printForms();">
     <input type="hidden" id="input_search" value="<?php echo  $_GET['application_id'];?>"/>
     <div class="container">
         <br />
@@ -238,10 +238,45 @@
             </div>
           </div>
         </div>
-        <div id='member_div' class='row'>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div id="secondPage">
+          <div id='member_div' class='row'>
 
+          </div>
         </div>
-        <br />
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <div class='row'>
           <!--house_type-->
           <div class='col-md-6 col-xs-6 col-sm-6'>
@@ -295,6 +330,22 @@
           </div>
         </div>
       </div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
     </body>
-    <script src="../js/index.js"></script>
+    <script type="text/javascript" src="bootstrap/js/jquery-3.1.1.min.js"></script>
+    <script src="js/printForm.js"></script>
   </html>
