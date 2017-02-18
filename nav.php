@@ -43,7 +43,6 @@
         <h4 class="modal-title">Census Form</h4>
       </div>
       <div class="modal-body">
-        <button onclick='printForm()' type="button" class="btn btn-primary" data-dismiss="modal">Print</button><br/>
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
@@ -297,6 +296,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button id='print_btn' onclick='printForm()' type="button" class="btn btn-primary" data-dismiss="modal">Print</button>
         </div>
       </div>
     </div><!-- /.modal-content -->
