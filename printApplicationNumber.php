@@ -43,13 +43,13 @@
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <p class='text-center'>Date Submitted</p>
     <h3 class='text-center'><?php echo date("M d, Y h:i A", strtotime($applicationForm['date_submit'])); ?></h3>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br />
     <p class='text-center'>Date Approved</p>
     <h3 class='text-center'><?php echo date("M d, Y h:i A", strtotime($applicationForm['date_approved'])); ?></h3>
     <div class='text-center'>
       <img src='https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=http%3A%2F%2F192.168.1.5/census/printForm.php?application_id=<?php echo $_GET['application_number']; ?>' />
     </div>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <p class='text-right'>____________________________________</p>
   </body>
 </html>
