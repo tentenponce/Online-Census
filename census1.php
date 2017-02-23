@@ -115,17 +115,93 @@
           <hr />
           <div>
             <div class="form-group">
-              <input type="text" class="form-control" name='province' required>
+              <select class='form-control' name='province' required>
+                <option value='Bangued'>Bangued</option>
+                <option value='Agusan Del Norte'>Agusan Del Norte</option>
+                <option value='Agusan Del Sur'>Agusan Del Sur</option>
+                <option value='Aklan'>Aklan</option>
+                <option value='Albay'>Albay</option>
+                <option value='Antique'>Antique</option>
+                <option value='Apayao'>Apayao</option>
+                <option value='Aurora'>Aurora</option>
+                <option value='Basilan'>Basilan</option>
+                <option value='Bataan'>Bataan</option>
+                <option value='Batanes'>Batanes</option>
+                <option value='Batangas'>Batangas</option>
+                <option value='Benguet'>Benguet</option>
+                <option value='Biliran'>Biliran</option>
+                <option value='Bohol'>Bohol</option>
+                <option value='Bukidnon'>Bukidnon</option>
+                <option value='Bulacan'>Bulacan</option>
+                <option value='Cagayan'>Cagayan</option>
+                <option value='Camarines Norte'>Camarines Norte</option>
+                <option value='Camarines Sur'>Camarines Sur</option>
+                <option value='Camiguin'>Camiguin</option>
+                <option value='Capiz'>Capiz</option>
+                <option value='Catanduanes'>Catanduanes</option>
+                <option value='Cavite'>Cavite</option>
+                <option value='Cebu'>Cebu</option>
+                <option value='Compostela Valley'>Compostela Valley</option>
+                <option value='Cotabato'>Cotabato</option>
+                <option value='Davao del Norte'>Davao del Norte</option>
+                <option value='Davao del Sur'>Davao del Sur</option>
+                <option value='Davao Occidental'>Davao Occidental</option>
+                <option value='Davao Oriental'>Davao Oriental</option>
+                <option value='Dinagat Islands'>Dinagat Islands</option>
+                <option value='Eastern Samar'>Eastern Samar</option>
+                <option value='Guimaras'>Guimaras</option>
+                <option value='Ifugao'>Ifugao</option>
+                <option value='Ilocos Norte'>Ilocos Norte</option>
+                <option value='Ilocos Sur'>Ilocos Sur</option>
+                <option value='Iloilo'>Iloilo</option>
+                <option value='Isabela'>Isabela</option>
+                <option value='Kalinga'>Kalinga</option>
+                <option value='La Union'>La Union</option>
+                <option value='LagunaLanao del Norte'>LagunaLanao del Norte</option>
+                <option value='Lanao del Sur'>Lanao del Sur</option>
+                <option value='Leyte'>Leyte</option>
+                <option value='Quezon'>Quezon</option>
+                <option value='Romblon'>Romblon</option>
+                <option value='Tarlac'>Tarlac</option>
+                <option value='Tawi-tawi'>Tawi-tawi</option>
+                <option value='Zambales'>Zambales</option>
+                <option value='Metro Manila'>Metro Manila</option>
+                <option value='Zamboanga sibugay'>Zamboanga sibugay</option>
+              </select>
               <label><small>PROVINCE</small></label>
             </div>
 
             <div class="form-group">
-              <input type="text" class="form-control" name='city' required>
+              <select class="form-control" name='city' required>
+                <option value='Caloocan'>Caloocan</option>
+                <option value='Las Pinas'>Las Pinas</option>
+                <option value='Makati'>Makati</option>
+                <option value='Malabon'>Malabon</option>
+                <option value='Mandaluyong'>Mandaluyong</option>
+                <option value='Manila'>Manila</option>
+                <option value='Marikina'>Marikina</option>
+                <option value='Muntinlupa'>Muntinlupa</option>
+                <option value='Navotas'>Navotas</option>
+                <option value='Paranaque'>Paranaque</option>
+                <option value='Pasay'>Pasay</option>
+                <option value='Pasig'>Pasig</option>
+                <option value='Pateros'>Pateros</option>
+                <option value='Quezon City'>Quezon City</option>
+                <option value='San Juan'>San Juan</option>
+                <option value='Taguig'>Taguig</option>
+                <option value='Valenzuela'>Valenzuela</option>
+              </select>
               <label><small>CITY/MUNICIPALITY</small></label>
             </div>
 
             <div class="form-group">
-              <input type="text" class="form-control" name='barangay' required>
+              <select class='form-control' name='barangay' required>
+                <?php
+                  for ($i = 0; $i <= 195; $i ++) {
+                    echo "<option value='$i'>$i</option>";
+                  }
+                ?>
+              </select>
               <label><small>BARANGAY</small></label>
             </div>
 
