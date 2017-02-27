@@ -53,7 +53,7 @@
 
   $db->insert("summary_of_visit", [
     "application_number" => $application_number,
-    "enumerator_code" => $_SESSION['enumerator_code'],
+    // "enumerator_code" => $_SESSION['enumerator_code'],
     "number_of_visit" => $_SESSION['number_of_visit'],
     "result_of_final_visit" => $_SESSION['result_of_final_visit'],
     "number_of_household_members" => $_SESSION['number_of_household_members'],

@@ -107,67 +107,24 @@ $(document).ready(function() {
             $("#line_number_of_respondent").html(datas[0].line_number_of_respondent);
             $("#name_of_household_head").html(datas[0].name_of_household_head);
             $("#address").html(datas[0].address);
-            $("#visit_1").html(datas[0].visit_1);
-            switch (parseInt(datas[0].visit_result_1)) {
+            switch (parseInt(datas[0].result_visit)) {
                 case 1:
-                    $("#visit_result_1").html("Completed");
+                    $("#result_visit").html("Completed");
                     break;
                 case 2:
-                    $("#visit_result_1").html("Partly completed");
+                    $("#result_visit").html("Partly completed");
                     break;
                 case 3:
-                    $("#visit_result_1").html("Refused");
+                    $("#result_visit").html("Refused");
                     break;
                 case 4:
-                    $("#visit_result_1").html("Postponed");
+                    $("#result_visit").html("Postponed");
                     break;
                 case 5:
-                    $("#visit_result_1").html("House hold is temporarily away/no respondent around");
+                    $("#result_visit").html("House hold is temporarily away/no respondent around");
                     break;
                 case 6:
-                    $("#visit_result_1").html("Others");
-                    break;
-            }
-            $("#visit_2").html(datas[0].visit_2);
-            switch (parseInt(datas[0].visit_result_2)) {
-                case 1:
-                    $("#visit_result_2").html("Completed");
-                    break;
-                case 2:
-                    $("#visit_result_2").html("Partly completed");
-                    break;
-                case 3:
-                    $("#visit_result_2").html("Refused");
-                    break;
-                case 4:
-                    $("#visit_result_2").html("Postponed");
-                    break;
-                case 5:
-                    $("#visit_result_2").html("House hold is temporarily away/no respondent around");
-                    break;
-                case 6:
-                    $("#visit_result_2").html("Others");
-                    break;
-            }
-            $("#visit_3").html(datas[0].visit_3);
-            switch (parseInt(datas[0].visit_result_3)) {
-                case 1:
-                    $("#visit_result_3").html("Completed");
-                    break;
-                case 2:
-                    $("#visit_result_3").html("Partly completed");
-                    break;
-                case 3:
-                    $("#visit_result_3").html("Refused");
-                    break;
-                case 4:
-                    $("#visit_result_3").html("Postponed");
-                    break;
-                case 5:
-                    $("#visit_result_3").html("House hold is temporarily away/no respondent around");
-                    break;
-                case 6:
-                    $("#visit_result_3").html("Others");
+                    $("#result_visit").html("Others");
                     break;
             }
             $("#next_visit").html(datas[0].next_visit);

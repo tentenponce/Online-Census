@@ -154,7 +154,7 @@
 
             <hr />
 
-            <div class="form-group">
+            <div class="form-group" style='display: none;'>
               <span id='next_enumerator_codevisit'></span><br/>
               <label><small>ENUMERATOR'S CODE</small></label>
             </div>

@@ -287,11 +287,6 @@
           <hr />
 
           <div class="form-group">
-            <input type="text" class="form-control" name='enumerator_code' required>
-            <label><small>ENUMERATOR'S CODE</small></label>
-          </div>
-
-          <div class="form-group">
             <input type="number" class="form-control" name='number_of_visit' required>
             <label><small>NUMBER OF VISITS MADE</small></label>
           </div>

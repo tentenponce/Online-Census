@@ -191,69 +191,14 @@
               <div class='row'>
 
                 <div class='col-md-6 row'>
-                  <div class='col-md-4 text-center'>
-                    <p><b>VISIT NUMBER 1</b></p>
+                  <div class='col-md-12 text-center'>
+                    <p><b>VISIT</b></p>
 
                     <hr />
 
                     <div class="form-group">
-                      <span  id='visit_1'></span><br/>
-                      <label><small>DATE OF VISIT</small></label>
-                    </div>
-
-                    <div class="form-group">
                       <label><small>RESULT OF VISIT</small></label><br/>
-                      <span id='visit_result_1'></span><br/>
-                      <!-- <select class='form-control' name='visit_result_1'>
-                        <option value='1'>Completed</option>
-                        <option value='2'>Partly completed</option>
-                        <option value='3'>Refused</option>
-                        <option value='4'>Postponed</option>
-                        <option value='5'>House hold is temporarily away/no respondent around</option>
-                        <option value='6'>Others</option>
-                      </select> -->
-                    </div>
-
-                  </div>
-
-                  <div class='col-md-4 text-center border-left'>
-                    <p><b>VISIT NUMBER 2</b></p>
-
-                    <hr />
-
-                    <div class="form-group">
-                      <span id='visit_2'></span><br/>
-                      <label><small>DATE OF VISIT</small></label>
-                    </div>
-
-                    <div class="form-group">
-                      <label><small>RESULT OF VISIT</small></label><br/>
-                      <span id='visit_result_2'></span><br/>
-                      <!-- <select class='form-control' name='visit_result_2' required>
-                        <option value='1'>Completed</option>
-                        <option value='2'>Partly completed</option>
-                        <option value='3'>Refused</option>
-                        <option value='4'>Postponed</option>
-                        <option value='5'>House hold is temporarily away/no respondent around</option>
-                        <option value='6'>Others</option>
-                      </select> -->
-                    </div>
-
-                  </div>
-
-                  <div class='col-md-4 text-center border-left'>
-                    <p><b>VISIT NUMBER 3</b></p>
-
-                    <hr />
-
-                    <div class="form-group">
-                      <span id='visit_3'></span><br/>
-                      <label><small>DATE OF VISIT</small></label>
-                    </div>
-
-                    <div class="form-group">
-                      <label><small>RESULT OF VISIT</small></label><br/>
-                      <span id='visit_result_3'></span><br/>
+                      <span id='result_visit'></span><br/>
                     </div>
 
                   </div>
@@ -265,7 +210,6 @@
                       <label><small>NEXT VISIT</small></label>
                     </div>
                   </div>
-
                 </div>
 
                 <div class='col-md-6 text-center border-left'>
@@ -376,5 +320,5 @@
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
-  <script src="js/admin.js?1"></script>
+  <script src="js/admin.js?2"></script>
 </html>

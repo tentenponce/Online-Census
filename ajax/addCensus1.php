@@ -36,7 +36,7 @@
     $_SESSION['next_visit'] = $_POST['next_visit'];
 
     //=============SUMMARY OF VISIT==============//
-    $_SESSION['enumerator_code'] = $_POST['enumerator_code'];
+    // $_SESSION['enumerator_code'] = $_POST['enumerator_code'];
     $_SESSION['number_of_visit'] = $_POST['number_of_visit'];
     $_SESSION['result_of_final_visit'] = $_POST['result_of_final_visit'];
     $_SESSION['number_of_household_members'] = $_POST['number_of_household_members'];
